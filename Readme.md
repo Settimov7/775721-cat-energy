@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Никита Прытков](https://up.htmlacademy.ru/adaptive/15/user/775721).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Рубец](https://github.com/sergeyamator).
 
 ---
 
