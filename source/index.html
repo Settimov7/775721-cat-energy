@@ -2,14 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: «Cat Energy»</title>
+    <title>HTML Academy: &laquo;Cat Energy&raquo;</title>
   </head>
   <body>
-    <header class="page-header">
-      <h1 class="visually-hidden">Зоомагазин «Cat Energy»</h1>
+    <header class="header">
+      <h1 class="visually-hidden">Зоомагазин &laquo;Cat Energy&raquo;</h1>
 
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="logo.svg" width="100" height="100" alt="Зоомагазин «Cat Energy»">
+      <a class="header__logo">
+        <img class="header__logo-image" src="logo.svg" width="100" height="100" alt="Зоомагазин &laquo;Cat Energy&raquo;">
       </a>
 
       <nav class="main-navigation">
@@ -30,13 +30,12 @@
       </nav>
     </header>
 
-    <main class="page-main">
+    <main class="main">
       <section class="promo">
         <h2 class="promo__title">Функциональное питание для котов</h2>
         <p class="promo__text">Занялся собой? Займись котом!</p>
         <div class="promo__image"></div>
-        <!-- Изображение кошачего корма непохоже на контентное изображение. -->
-        <a class="promo__button" href="form.html">Подобрать программу</a>
+        <a class="button" href="form.html">Подобрать программу</a>
       </section>
 
       <section class="programs-description">
@@ -63,10 +62,9 @@
           </li>
         </ul>
       </section>
-      <!-- Не совсем понял, как правильно поступать с различными иконками и декоротивными элементами, придерживаясь БЭМ. -->
 
       <section class="advantages">
-        <h2 class="visually-hidden">Преимущества питания «Cat Energy»</h2>
+        <h2 class="visually-hidden">Преимущества питания &laquo;Cat Energy&raquo;</h2>
 
         <b class="advantages__title">Как это работает</b>
 
@@ -117,7 +115,6 @@
             <td class="example__data-value">60 дней</td>
           </tr>
         </table>
-        <!-- или лучше сделать через ul? -->
 
         <p class="example__cost">Затраты на питание: 15 000 руб.</p>
 
@@ -135,15 +132,16 @@
 
           <div class="example__toggle">
             <a class="example__toggle-status" href="#">Было</a>
-            <div class="example__toggle-range"></div>
+            <div class="example__toggle-range">
+              <div class="example__toggle-toddler"></div>
+            </div>
             <a class="example__toggle-status" href="#">Стало</a>
-            <!-- Как лучше делать подобные переключатели? На дивах или input range? -->
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="footer">
       <div class="cooperation">
         <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
 
@@ -157,11 +155,11 @@
 
         <a href="map__link">
           <img class="map__image" src="map.jpg" width="100" height="100"
-            alt="Зоомагазин «Cat Energy» находится по адресу: г.Санкт-Петербург ул. Большая Конюшенная, д. 19/8">
+            alt="Зоомагазин &laquo;Cat Energy&raquo; находится по адресу: г.Санкт-Петербург ул. Большая Конюшенная, д. 19/8">
         </a>
       </div>
 
-      <a class="page-footer__logo">Cat Energy</a>
+      <a class="footer__logo">Cat Energy</a>
 
       <section class="social">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
