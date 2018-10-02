@@ -10,20 +10,20 @@
       <h1 class="visually-hidden">Зоомагазин &laquo;Cat Energy&raquo;</h1>
 
       <a class="header__logo" href="index.html">
-        <img class="header__logo-image" src="logo.svg" width="100" height="100" alt="Зоомагазин &laquo;Cat Energy&raquo;">
+        <img class="header__logo-image" src="./img/logo-mobile.svg" width="191" height="37" alt="Зоомагазин &laquo;Cat Energy&raquo;">
       </a>
 
       <nav class="main-navigation">
         <a class="main-navigation__toggle" href="#">Открыть меню</a>
-        <ul class="main-navigation__menu-list menu-list">
-          <li class="menu-list__item menu-list__item--active">
-            <a class="menu-list__link" href="index.html">Главная</a>
+        <ul class="main-navigation__menu-list">
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="index.html">Главная</a>
           </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="catalog.html">Каталог продукции</a>
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link">Подбор программы</a>
+          <li class="main-navigation__menu-item main-navigation__menu-item--active">
+            <a class="main-navigation__menu-link">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -43,7 +43,7 @@
 
             <label>
                 <span class="program-selection__label">Имя:<sup>*</sup></span>
-                <input class="program-selection__input" type="text" name="name" placeholder="Имя" required>
+                <input class="program-selection__input" type="text" name="name" placeholder="Имя" required autofocus>
             </label>
 
             <label>
@@ -93,13 +93,11 @@
             <label>
               <span class="program-selection__label">E-mail:<sup>*</sup></span>
               <input class="program-selection__input" type="email" name="email" placeholder="email@example.com" required>
-              <span class="program-selection__input-icon program-selection__input-icon--email"></span>
             </label>
 
             <label>
               <span class="program-selection__label">Телефон:<sup>*</sup></span>
-              <input class="program-selection__input" type="tel" name="telephone" placeholder="8(800)555-35-35" required>
-              <span class="program-selection__input-icon program-selection__input-icon-telephone"></span>
+              <input class="program-selection__input" type="tel" name="telephone" placeholder="8 (800) 555-35-35" required>
             </label>
           </fieldset>
 
@@ -149,7 +147,7 @@
 
           <button class="button" type="submit">Отправить заявку</button>
 
-          <small class="program-selection__legend">
+          <small class="program-selection__info">
             <sup>*</sup> &mdash; Обязательные поля
           </small>
         </form>
@@ -168,13 +166,15 @@
       <div class="map">
         <h2 class="visually-hidden">Как нас найти?</h2>
 
-        <a href="map__link">
-          <img class="map__image" src="map.jpg" width="100" height="100"
+        <a class="map__link" href="#">
+          <img class="map__image" src="./img/bg-map-mobile@1x.png" width="320" height="400"
             alt="Зоомагазин &laquo;Cat Energy&raquo; находится по адресу: г.Санкт-Петербург ул. Большая Конюшенная, д. 19/8">
         </a>
       </div>
 
-      <a class="footer__logo" href="index.html">Cat Energy</a>
+      <a class="footer__logo" href="index.html">
+        <img class="footer__logo-image" src="./img/logo-footer.svg" width="128" height="24" alt="Зоомагазин &laquo;Cat Energy&raquo;">
+      </a>
 
       <section class="social">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
@@ -192,12 +192,9 @@
         </ul>
       </section>
 
-      <div class="developed-by">
-        <a class="developed-by__link" href="#">
-          <p class="developed-by__name">Html Academy</p>
-          <div class="developed-by__logo"></div>
-        </a>
-      </div>
+      <a class="footer__developed-by-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="footer__developed-by-link--uppercase">Html</span> Academy
+      </a>
     </footer>
   </body>
 </html>
