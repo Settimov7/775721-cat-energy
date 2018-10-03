@@ -3,37 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: &laquo;Cat Energy&raquo;</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
       <h1 class="visually-hidden">Зоомагазин &laquo;Cat Energy&raquo;</h1>
 
       <a class="header__logo">
-        <img class="header__logo-image" src="logo.svg" width="100" height="100" alt="Зоомагазин &laquo;Cat Energy&raquo;">
+        <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="37" alt="Зоомагазин &laquo;Cat Energy&raquo;">
       </a>
 
       <nav class="main-navigation">
         <a class="main-navigation__toggle" href="#">Открыть меню</a>
-        <div class="main-navigation__wrapper">
-          <ul class="main-navigation__menu-list menu-list">
-            <li class="menu-list__item menu-list__item--active">
-              <a class="menu-list__link">Главная</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-navigation__menu-list">
+          <li class="main-navigation__menu-item main-navigation__menu-item--active">
+            <a class="main-navigation__menu-link">Главная</a>
+          </li>
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
     <main class="main">
       <section class="promo">
-        <h2 class="promo__title">Функциональное питание для котов</h2>
-        <p class="promo__text">Занялся собой? Займись котом!</p>
+        <div class="promo__wrapper">
+          <h2 class="promo__title">Функциональное питание для котов</h2>
+          <p class="promo__text">Занялся собой? Займись котом!</p>
+        </div>
         <div class="promo__image"></div>
         <a class="button" href="form.html">Подобрать программу</a>
       </section>
@@ -44,7 +45,6 @@
         <ul class="programs-description__list">
           <li class="programs-description__item">
             <h3 class="programs-description__title">Похудение</h3>
-            <div class="programs-description__icon programs-description__icon--fat-cat"></div>
             <p class="programs-description__description">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
               Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
@@ -53,7 +53,6 @@
           </li>
           <li class="programs-description__item">
             <h3 class="programs-description__title">Набор массы</h3>
-            <div class="programs-description__icon programs-description__icon--thin-cat"></div>
             <p class="programs-description__description">
               Заработать авторитет среди дворовых котов и даже собак?
               Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -70,25 +69,21 @@
 
         <ul class="advantages__list">
           <li class="advantages__item">
-            <div class="advantages__icon advantages__icon--leaf"></div>
             <p class="advantages__description">
               Функциональное питание содержит только полезные питательные вещества.
             </p>
           </li>
           <li class="advantages__item">
-            <div class="advantages__icon advantages__icon--powder"></div>
             <p class="advantages__description">
               Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
             </p>
           </li>
           <li class="advantages__item">
-            <div class="advantages__icon advantages__icon--cutlery"></div>
             <p class="advantages__description">
               Замените один-два приема обычной еды на наше функциональное питание.
             </p>
           </li>
           <li class="advantages__item">
-            <div class="advantages__icon advantages__icon--clock"></div>
             <p class="advantages__description">
               Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
             </p>
@@ -107,8 +102,8 @@
 
         <table class="example__data">
           <tr>
-            <th class="example__data-field">снижение веса</th>
-            <th class="example__data-field">затрачено времени</th>
+            <th class="example__data-field">Cнижение веса</th>
+            <th class="example__data-field">Затрачено времени</th>
           </tr>
           <tr>
             <td class="example__data-value">5 кг</td>
@@ -121,12 +116,10 @@
         <div class="example__slider">
           <ul class="example__slide-list">
             <li class="example__slide">
-              <img class="example__slide-image example__slide-image" src="img-1.png"
-                width="100" height="100" alt="Кот до смены питания">
+              <p>Было</p>
             </li>
             <li class="example__slide">
-              <img class="example__slide-image example__slide-image" src="img-2.png"
-                width="100" height="100" alt="Кот после смены питания">
+              <p>Стало</p>
             </li>
           </ul>
 
@@ -154,12 +147,14 @@
         <h2 class="visually-hidden">Как нас найти?</h2>
 
         <a class="map__link" href="#">
-          <img class="map__image" src="map.jpg" width="100" height="100"
+          <img class="map__image" src="img/bg-map-mobile@1x.png" width="320" height="400"
             alt="Зоомагазин &laquo;Cat Energy&raquo; находится по адресу: г.Санкт-Петербург ул. Большая Конюшенная, д. 19/8">
         </a>
       </div>
 
-      <a class="footer__logo">Cat Energy</a>
+      <a class="footer__logo">
+        <img class="footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Зоомагазин &laquo;Cat Energy&raquo;">
+      </a>
 
       <section class="social">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
@@ -177,12 +172,9 @@
         </ul>
       </section>
 
-      <div class="developed-by">
-        <a class="developed-by__link" href="#">
-          <p class="developed-by__name">Html Academy</p>
-          <div class="developed-by__logo"></div>
-        </a>
-      </div>
+      <a class="footer__developed-by-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="footer__developed-by-link--uppercase">Html</span> Academy
+      </a>
     </footer>
   </body>
 </html>

@@ -1,0 +1,75 @@
+.program-selection__title {
+  .regular-heading-font();
+}
+
+.program-selection__description {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.program-selection__fieldset {
+  border: none;
+}
+
+.program-selection__label,
+.program-selection__checkbox-name {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @black-input;
+}
+
+.program-selection__input,
+.program-selection__textarea {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @gray;
+
+  border: 1px solid rgba(205, 205, 205, 0.5);
+}
+
+.program-selection__input:hover {
+  border-color: rgba(205, 205, 205, 1);
+}
+
+.program-selection__input:focus {
+  border-color: @gray;
+  outline: none;
+}
+
+.program-selection__input:invalid {
+  border-color: @input-error;
+}
+
+.program-selection__input::placeholder,
+.program-selection__textarea::placeholder {
+  color: @gray;
+}
+
+.program-selection__radio-list,
+.program-selection__checkbox-list {
+  .list-reset();
+}
+
+.program-selection__legend {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.program-selection__info {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: @gray;
+}

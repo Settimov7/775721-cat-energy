@@ -1,0 +1,38 @@
+.button {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @white;
+
+  background-color: @green;
+  border: none;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: @dark-green;
+}
+
+.button:active {
+  color: fade(@white, 70%);
+}
+
+.button--gray {
+  color: @gray;
+
+  background: @gray-bg;
+}
+
+.button--gray:hover,
+.button--gray:focus,
+.button--gray:active {
+  background-color: @dark-gray-bg;
+}
+
+.button--gray:active {
+  color: fade(@gray, 70%);
+}
