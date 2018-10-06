@@ -38,3 +38,23 @@
 .footer__developed-by-link:active {
   opacity: 0.3;
 }
+
+@media (min-width: @tablet-width) {
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 92.19%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+  }
+
+  .footer__logo {
+    .text-reset();
+  }
+
+  .footer__developed-by-link {
+    .text-reset();
+    width: 22.88%;
+  }
+}

@@ -50,3 +50,36 @@
 .programs-description__link:active {
   color: fade(@black, 70%);
 }
+
+@media (min-width: @tablet-width) {
+  .programs-description__item {
+    box-sizing: border-box;
+    width: 92.19%;
+    margin-bottom: 30px;
+    padding-left: 53px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .programs-description__title {
+    .set-font(custom-font; 36px; 37px);
+
+    .text-reset;
+    margin-bottom: 25px;
+  }
+
+  .programs-description__description {
+    .set-font(regular-font; 16px; 24px);
+
+    .text-reset();
+    margin-bottom: 60px;
+
+    border: none;
+  }
+
+  .programs-description__link {
+    .set-font(custom-font; 20px; 20px);
+
+    .text-reset();
+  }
+}

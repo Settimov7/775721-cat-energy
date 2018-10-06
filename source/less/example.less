@@ -93,3 +93,90 @@
   text-decoration: none;
   color: @black;
 }
+
+@media (min-width: @tablet-width) {
+  .example {
+    color: @black;
+
+    padding-top: 50px;
+    padding-bottom: 0px;
+    margin-bottom: 70px;
+
+    background-color: @white;
+    border-top: 1px solid fade(@gray, 10%);
+  }
+
+  .example__wrapper {
+    width: 92.19%;
+  }
+
+  .example__title {
+    .set-font(custom-font; 60px; 60px);
+    margin-bottom: 68px;
+  }
+
+  .example__description {
+    .set-font(regular-font; 16px; 24px);
+
+    width: 95.6%;
+    margin-bottom: 55px;
+  }
+
+  .example__container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 256px;
+  }
+
+  .example__data {
+    .text-reset();
+  }
+
+  .example__data-value {
+    .set-font(custom-font; 30px; 37px);
+
+    width: 162px;
+    margin-right: 42px;
+  }
+
+  .example__data-field {
+    .set-font(regular-font; 14px; 14px);
+    white-space: nowrap;
+
+    width: 116px;
+    margin-right: 75px;
+    padding: 0 10px;
+
+    background-color: @white;
+  }
+
+  .example__data-field:last-child {
+    width: 140px;
+  }
+
+  .example__data-field-row {
+    top: 70px;
+    left: 25px;
+  }
+
+  .example__cost {
+    .set-font(custom-font; 20px; 20px);
+    text-align: right;
+    width: 27.12%;
+  }
+
+  .example__slider {
+    width: 108%;
+    margin-left: -4%;
+    background-color: @gray-bg;
+  }
+
+  .example__slider-wrapper {
+    width: 92.6%;
+    margin: 0 auto;
+    padding-top: 375px;
+    padding-bottom: 81px;
+  }
+
+  //Костыль. Надо что нибудь придумать
+}
