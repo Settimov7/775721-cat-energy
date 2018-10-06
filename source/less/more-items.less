@@ -1,9 +1,29 @@
+.more-items {
+  text-align: center;
+
+  padding-top: 80px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid fade(@gray, 10%);
+}
+
+.more-items__wrapper {
+  width: 87.5%;
+  margin: 0 auto;
+}
+
 .more-items__title {
   .set-font(custom-font; 16px; 20px);
   text-transform: uppercase;
+
+  display: block;
+  .text-reset();
+  margin-bottom: 10px;
 }
 
 .more-items__description {
   .set-font(regular-font; 12px);
   color: @gray;
+
+  .text-reset();
+  margin-bottom: 23px;
 }
