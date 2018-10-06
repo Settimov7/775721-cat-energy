@@ -1,3 +1,7 @@
+.programs-description {
+  margin-bottom: 10px;
+}
+
 .programs-description__list {
   .list-reset();
 }
@@ -5,17 +9,32 @@
 .programs-description__item {
   color: @black;
 
-  background-color: @gray-bg;
-}
+  width: 87.5%;
+  margin: 0 auto;
+  margin-bottom: 20px;
 
-.programs-description__description {
-  .set-font(regular-font; 14px; 18px);
-  color: @gray;
+  background-color: @gray-bg;
 }
 
 .programs-description__title {
   .set-font(custom-font; 24px; 37px);
   text-transform: uppercase;
+
+  .text-reset();
+  padding-left: 91px;
+  padding-top: 27px;
+  margin-bottom: 20px;
+}
+
+.programs-description__description {
+  .set-font(regular-font; 14px; 18px);
+  color: @gray;
+
+  .text-reset();
+  margin: 0 20px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid fade(@gray, 10%);
 }
 
 .programs-description__link {
@@ -23,6 +42,9 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @black;
+
+  display: block;
+  padding: 20px;
 }
 
 .programs-description__link:active {

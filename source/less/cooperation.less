@@ -1,14 +1,30 @@
 .cooperation {
   background-color: @white;
+  padding-bottom: 25px;
+}
+
+.cooperation__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 87.5%;
+  margin: 0 auto;
+
 }
 
 .cooperation__title {
   .set-font(custom-font; 16px; 20px;);
   text-transform: uppercase;
+
+  .text-reset();
+  display: block;
+  width: 44%;
 }
 
 .cooperation__adress {
   .set-font(regular-font; 14px; 20px);
   font-style: normal;
   color: @gray;
+
+  display: block;
+  width: 50%;
 }
