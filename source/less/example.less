@@ -97,13 +97,18 @@
 @media (min-width: @tablet-width) {
   .example {
     color: @black;
-
-    padding-top: 50px;
+    padding-top: 0;
     padding-bottom: 0px;
     margin-bottom: 70px;
 
-    background-color: @white;
+    background-color: @gray-bg;
     border-top: 1px solid fade(@gray, 10%);
+  }
+
+  .example__wrapper-white {
+    background-color: @white;
+
+    padding-top: 50px;
   }
 
   .example__wrapper {
@@ -165,18 +170,7 @@
     width: 27.12%;
   }
 
-  .example__slider {
-    width: 108%;
-    margin-left: -4%;
-    background-color: @gray-bg;
+  .example__cost-value {
+    display: inline-block;
   }
-
-  .example__slider-wrapper {
-    width: 92.6%;
-    margin: 0 auto;
-    padding-top: 375px;
-    padding-bottom: 81px;
-  }
-
-  //Костыль. Надо что нибудь придумать
 }
