@@ -39,6 +39,7 @@
             Заполните анкету и мы подберем программу питания для вашего кота
           </p>
         </div>
+
         <form class="program-selection__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="program-selection__fieldset">
             <legend class="visually-hidden">Данные кота</legend>
@@ -157,11 +158,13 @@
           </fieldset>
 
           <div class="program-selection__wrapper">
-            <button class="program-selection__button button" type="submit">Отправить заявку</button>
+            <div class="program-selection__container">
+              <button class="program-selection__button button" type="submit">Отправить заявку</button>
 
-            <small class="program-selection__info">
-              <sup>*</sup> &mdash; Обязательные поля
-            </small>
+              <small class="program-selection__info">
+                <sup>*</sup> &mdash; Обязательные поля
+              </small>
+            </div>
           </div>
         </form>
       </section>
@@ -173,7 +176,7 @@
           <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
 
           <address class="cooperation__adress">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            ул. Большая Конюшенная, д. 19/8 <span class="cooperation__adress-city">Санкт-Петербург</span>
           </address>
         </div>
       </div>
@@ -187,29 +190,31 @@
         </a>
       </div>
 
-      <a class="footer__logo" href="index.html">
-        <img class="footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Зоомагазин &laquo;Cat Energy&raquo;">
-      </a>
+      <div class="footer__container">
+        <a class="footer__logo" href="index.html">
+          <img class="footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Зоомагазин &laquo;Cat Energy&raquo;">
+        </a>
 
-      <section class="social">
-        <h2 class="visually-hidden">Мы в социальных сетях</h2>
+        <section class="social">
+          <h2 class="visually-hidden">Мы в социальных сетях</h2>
 
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="#">Мы в Instagram</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="#">Мы в Instagram</a>
-          </li>
-        </ul>
-      </section>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#">Мы в Instagram</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#">Мы в Instagram</a>
+            </li>
+          </ul>
+        </section>
 
-      <a class="footer__developed-by-link" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="footer__developed-by-link--uppercase">Html</span> Academy
-      </a>
+        <a class="footer__developed-by-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="footer__developed-by-link--uppercase">Html</span> Academy
+        </a>
+      </div>
     </footer>
   </body>
 </html>
