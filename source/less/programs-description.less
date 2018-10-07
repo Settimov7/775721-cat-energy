@@ -88,3 +88,37 @@
     .text-reset();
   }
 }
+
+@media (min-width: @desktop-width) {
+  .programs-description {
+    width: 1220px;
+    margin: 0 auto;
+    margin-bottom: 82px;
+  }
+
+  .programs-description__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .programs-description__item {
+    width: 570px;
+    .text-reset();
+    padding: 63px 52px;
+    padding-top: 82px;
+  }
+
+  .programs-description__description:last-of-type {
+    width: auto;
+  }
+
+  .programs-description__title {
+    margin-left: 162px;
+    margin-bottom: 74px;
+  }
+
+  .programs-description__description {
+    width: 465px;
+    margin-bottom: 40px;
+  }
+}

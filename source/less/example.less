@@ -130,6 +130,7 @@
   .example__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-bottom: 256px;
   }
 
@@ -172,5 +173,44 @@
 
   .example__cost-value {
     display: inline-block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    border: none;
+    background-color: @white;
+  }
+
+  .example__wrapper-white {
+    background-color:inherit;
+
+    padding: 0;
+  }
+
+  .example__wrapper {
+    width: 100%;
+    margin: 0;
+  }
+
+  .example__container {
+    display: block;
+    padding: 0;
+  }
+
+  .example__cost {
+    text-align: left;
+    width: auto;
+    .text-reset();
+  }
+
+  .example__title {
+    width: 1220px;
+    margin: 0 auto;
+    margin-bottom: 75px;
+  }
+
+  .example__wrapper-2 {
+    background-color: @gray-bg;
   }
 }
