@@ -43,3 +43,43 @@
 .catalog-extra__description-price--uppercase {
   text-transform: uppercase;
 }
+
+@media (min-width: @tablet-width) {
+  .catalog-extra {
+    width: 92.19%;
+  }
+
+  .catalog-extra__title {
+    .set-font(custom-font; 36px; 36px);
+
+    border: none;
+  }
+
+  .catalog-extra__item {
+    padding: 28px 37px;
+
+    border-bottom: 1px solid fade(@gray, 25%);
+  }
+
+  .catalog-extra__item:first-of-type {
+    border-top: 1px solid fade(@gray, 25%);
+  }
+
+  .catalog-exatra__item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .catalog-extra__product-title {
+    .set-font(custom-font; 20px; 20px);
+  }
+
+  .catalog-extra__product-description {
+    .set-font(regular-font; 16px; 20px);
+  }
+
+  .catalog-extra__description-quantity {
+    margin-right: 53px;
+  }
+}

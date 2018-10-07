@@ -27,3 +27,35 @@
   .text-reset();
   margin-bottom: 23px;
 }
+
+@media (min-width: @tablet-width) {
+  .more-items {
+    box-sizing: border-box;
+    width: 324px;
+    padding: 40px 38px;
+    padding-top: 0px;
+
+    border: 1px solid fade(@gray, 10%);
+  }
+
+  .more-items__wrapper {
+    width: 100%;
+  }
+
+  .more-items__title {
+    .set-font(custom-font; 20px; 20px);
+
+    width: 56%;
+    margin: 0 auto;
+    margin-top: 167px;
+    margin-bottom: 25px;
+  }
+
+  .more-items__description {
+    .set-font(regular-font; 16px; 16px);
+
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 85px;
+  }
+}
