@@ -7,39 +7,39 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header">
-      <h1 class="visually-hidden">Зоомагазин &laquo;Cat Energy&raquo;</h1>
+    <header class="header header--green">
+      <div class="header__container">
+        <h1 class="visually-hidden">Зоомагазин &laquo;Cat Energy&raquo;</h1>
 
-      <a class="header__logo">
-        <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="37" alt="Зоомагазин &laquo;Cat Energy&raquo;">
-      </a>
+        <a class="header__logo">
+          <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="37" alt="Зоомагазин &laquo;Cat Energy&raquo;">
+        </a>
 
-      <nav class="main-navigation">
-        <a class="main-navigation__toggle" href="#">Открыть меню</a>
-        <ul class="main-navigation__menu-list">
-          <li class="main-navigation__menu-item main-navigation__menu-item--active main-navigation__menu-item--white">
-            <a class="main-navigation__menu-link main-navigation__menu-link--white">Главная</a>
-          </li>
-          <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link main-navigation__menu-link--white" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link main-navigation__menu-link--white" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="main-navigation">
+          <a class="main-navigation__toggle" href="#">Открыть меню</a>
+          <ul class="main-navigation__menu-list">
+            <li class="main-navigation__menu-item main-navigation__menu-item--active main-navigation__menu-item--white">
+              <a class="main-navigation__menu-link main-navigation__menu-link--white">Главная</a>
+            </li>
+            <li class="main-navigation__menu-item">
+              <a class="main-navigation__menu-link main-navigation__menu-link--white" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-navigation__menu-item">
+              <a class="main-navigation__menu-link main-navigation__menu-link--white" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="main">
+
       <section class="promo">
-        <div class="promo__wrapper">
-          <div class="promo__container">
-            <h2 class="promo__title">Функциональное питание для котов</h2>
-            <p class="promo__text">Занялся собой? Займись котом!</p>
-            <a class="promo__button button" href="form.html">Подобрать программу</a>
-          </div>
+        <div class="promo__container">
+          <h2 class="promo__title">Функциональное питание для котов</h2>
+          <p class="promo__text">Занялся собой? Займись котом!</p>
+          <a class="promo__button button" href="form.html">Подобрать программу</a>
         </div>
-        <div class="promo__wrapper"></div>
       </section>
 
       <section class="programs-description">
@@ -96,52 +96,48 @@
       </section>
 
       <section class="example">
-        <div class="example__wrapper-white">
-          <div class="example__wrapper">
-            <h2 class="example__title">Живой пример</h2>
+        <div class="example__wrapper">
+          <h2 class="example__title">Живой пример</h2>
 
-            <div class="example__wrapper-2">
+          <div class="example__container-columns">
+            <div class="example__container">
               <p class="example__description">
                   Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
                   Отличный результат без изнуряющих тренировок!
                   При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
               </p>
 
-              <div class="example__container">
-                <table class="example__data">
-                  <tr class="example__data-field-row">
-                    <th class="example__data-field">Cнижение веса</th>
-                    <th class="example__data-field">Затрачено времени</th>
-                  </tr>
-                  <tr class="example__data-value-row">
-                    <td class="example__data-value">5 кг</td>
-                    <td class="example__data-value">60 дней</td>
-                  </tr>
-                </table>
+              <table class="example__data">
+                <tr class="example__data-field-row">
+                  <th class="example__data-field">Cнижение веса</th>
+                  <th class="example__data-field">Затрачено времени</th>
+                </tr>
+                <tr class="example__data-value-row">
+                  <td class="example__data-value">5 кг</td>
+                  <td class="example__data-value">60 дней</td>
+                </tr>
+              </table>
 
-                <p class="example__cost">Затраты на питание: <span class="example__cost-value">15 000 руб.</span></p>
-              </div>
+              <p class="example__cost">Затраты на питание: <span class="example__cost-value">15 000 руб.</span></p>
             </div>
-          </div>
-        </div>
 
-        <div class="example__wrapper">
-          <div class="example__slider">
-            <ul class="example__slide-list">
-              <li class="example__slide">
-                <p>Было</p>
-              </li>
-              <li class="example__slide">
-                <p>Стало</p>
-              </li>
-            </ul>
+            <div class="example__slider">
+              <ul class="example__slide-list">
+                <li class="example__slide">
+                  <p>Было</p>
+                </li>
+                <li class="example__slide">
+                  <p>Стало</p>
+                </li>
+              </ul>
 
-            <div class="example__toggle">
-              <a class="example__toggle-status" href="#">Было</a>
-              <div class="example__toggle-range">
-                <div class="example__toggle-toddler"></div>
+              <div class="example__toggle">
+                <a class="example__toggle-status" href="#">Было</a>
+                <div class="example__toggle-range">
+                  <div class="example__toggle-toddler"></div>
+                </div>
+                <a class="example__toggle-status" href="#">Стало</a>
               </div>
-              <a class="example__toggle-status" href="#">Стало</a>
             </div>
           </div>
         </div>
