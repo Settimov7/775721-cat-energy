@@ -8,26 +8,28 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="visually-hidden">Зоомагазин &laquo;Cat Energy&raquo;</h1>
+      <div class="header__container">
+        <h1 class="visually-hidden">Зоомагазин &laquo;Cat Energy&raquo;</h1>
 
-      <a class="header__logo" href="index.html">
-        <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="37" alt="Зоомагазин &laquo;Cat Energy&raquo;">
-      </a>
+        <a class="header__logo" href="index.html">
+          <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="37" alt="Зоомагазин &laquo;Cat Energy&raquo;">
+        </a>
 
-      <nav class="main-navigation">
-        <a class="main-navigation__toggle" href="#">Открыть меню</a>
-        <ul class="main-navigation__menu-list">
-          <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link" href="index.html">Главная</a>
-          </li>
-          <li class="main-navigation__menu-item main-navigation__menu-item--active">
-            <a class="main-navigation__menu-link">Каталог продукции</a>
-          </li>
-          <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="main-navigation">
+          <a class="main-navigation__toggle" href="#">Открыть меню</a>
+          <ul class="main-navigation__menu-list">
+            <li class="main-navigation__menu-item">
+              <a class="main-navigation__menu-link" href="index.html">Главная</a>
+            </li>
+            <li class="main-navigation__menu-item main-navigation__menu-item--active">
+              <a class="main-navigation__menu-link">Каталог продукции</a>
+            </li>
+            <li class="main-navigation__menu-item">
+              <a class="main-navigation__menu-link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="main">
@@ -36,7 +38,7 @@
 
         <ul class="catalog__list">
           <li class="catalog__item">
-            <div class="catalog__wrapper">
+            <div class="catalog__product-wrapper">
               <a class="catalog__product-link" href="#">
                 <h3 class="catalog__product-title">
                   Cat energy pro <span class="catalog__product-title-weight">500 г</span>
@@ -66,7 +68,7 @@
           </li>
 
           <li class="catalog__item">
-            <div class="catalog__wrapper">
+            <div class="catalog__product-wrapper">
               <a class="catalog__product-link" href="#">
                 <h3 class="catalog__product-title">
                   Cat energy pro <span class="catalog__product-title-weight">1000 г</span>
@@ -96,7 +98,7 @@
           </li>
 
           <li class="catalog__item">
-            <div class="catalog__wrapper">
+            <div class="catalog__product-wrapper">
               <a class="catalog__product-link" href="#">
                 <h3 class="catalog__product-title">
                   Cat energy pro <span class="catalog__product-title-weight">500 г</span>
@@ -126,7 +128,7 @@
           </li>
 
           <li class="catalog__item">
-            <div class="catalog__wrapper">
+            <div class="catalog__product-wrapper">
               <a class="catalog__product-link" href="#">
                 <h3 class="catalog__product-title">
                   Cat energy pro <span class="catalog__product-title-weight">1000 г</span>
@@ -156,7 +158,7 @@
           </li>
 
           <li class="catalog__item">
-            <div class="catalog__wrapper">
+            <div class="catalog__product-wrapper">
               <a class="catalog__product-link" href="#">
                 <h3 class="catalog__product-title">
                   Cat energy slim <span class="catalog__product-title-weight">500 г</span>
@@ -186,7 +188,7 @@
           </li>
 
           <li class="catalog__item">
-            <div class="catalog__wrapper">
+            <div class="catalog__product-wrapper">
               <a class="catalog__product-link" href="#">
                 <h3 class="catalog__product-title">
                   Cat energy slim <span class="catalog__product-title-weight">1000 г</span>
@@ -216,7 +218,7 @@
           </li>
 
           <li class="catalog__item">
-            <div class="catalog__wrapper">
+            <div class="catalog__product-wrapper">
               <a class="catalog__product-link" href="#">
                 <h3 class="catalog__product-title">
                   Cat energy slim <span class="catalog__product-title-weight">500 г</span>
@@ -259,79 +261,81 @@
         </ul>
       </section>
 
-      <section class="catalog-extra">
-        <h2 class="catalog-extra__title">Дополнительные товары</h2>
+      <div class="catalog__wrapper">
+        <section class="catalog-extra">
+          <h2 class="catalog-extra__title">Дополнительные товары</h2>
 
-        <ul class="catalog-extra__list">
-          <li class="catalog-extra__item">
-            <div class="catalog-exatra__item-container">
-              <a class="catalog-extra__product-title" href="#">Сахарозаменитель</a>
+          <ul class="catalog-extra__list">
+            <li class="catalog-extra__item">
+              <div class="catalog-exatra__item-container">
+                <a class="catalog-extra__product-title" href="#">Сахарозаменитель</a>
 
-              <div class="catalog-extra__product-description">
-                <p class="catalog-extra__description-quantity">1 упаковка (100 г)</p>
-                <p class="catalog-extra__description-price">
-                    100 <span class="currency">р.</span>
-                </p>
+                <div class="catalog-extra__product-description">
+                  <p class="catalog-extra__description-quantity">1 упаковка (100 г)</p>
+                  <p class="catalog-extra__description-price">
+                      100 <span class="currency">р.</span>
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <a class="button" href="#">Заказать</a>
-          </li>
+              <a class="button" href="#">Заказать</a>
+            </li>
 
-          <li class="catalog-extra__item">
-            <div class="catalog-exatra__item-container">
-              <a class="catalog-extra__product-title" href="#">Питьевая вода</a>
+            <li class="catalog-extra__item">
+              <div class="catalog-exatra__item-container">
+                <a class="catalog-extra__product-title" href="#">Питьевая вода</a>
 
-              <div class="catalog-extra__product-description">
-                <p class="catalog-extra__description-quantity">5 литров</p>
-                <p class="catalog-extra__description-price">
-                    50 <span class="currency">р.</span>
-                </p>
+                <div class="catalog-extra__product-description">
+                  <p class="catalog-extra__description-quantity">5 литров</p>
+                  <p class="catalog-extra__description-price">
+                      50 <span class="currency">р.</span>
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <a class="button" href="#">Заказать</a>
-          </li>
+              <a class="button" href="#">Заказать</a>
+            </li>
 
-          <li class="catalog-extra__item">
-            <div class="catalog-exatra__item-container">
-              <a class="catalog-extra__product-title" href="#">Молоко</a>
+            <li class="catalog-extra__item">
+              <div class="catalog-exatra__item-container">
+                <a class="catalog-extra__product-title" href="#">Молоко</a>
 
-              <div class="catalog-extra__product-description">
-                <p class="catalog-extra__description-quantity">1 литр</p>
-                <p class="catalog-extra__description-price">
-                    100 <span class="currency">р.</span>
-                </p>
+                <div class="catalog-extra__product-description">
+                  <p class="catalog-extra__description-quantity">1 литр</p>
+                  <p class="catalog-extra__description-price">
+                      100 <span class="currency">р.</span>
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <a class="button" href="#">Заказать</a>
-          </li>
+              <a class="button" href="#">Заказать</a>
+            </li>
 
-          <li class="catalog-extra__item">
-            <div class="catalog-exatra__item-container">
-              <a class="catalog-extra__product-title" href="#">Витамины</a>
+            <li class="catalog-extra__item">
+              <div class="catalog-exatra__item-container">
+                <a class="catalog-extra__product-title" href="#">Витамины</a>
 
-              <div class="catalog-extra__product-description">
-                <p class="catalog-extra__description-quantity">1 упаковка (30 г)</p>
-                <p class="catalog-extra__description-price">
-                    300 <span class="currency">р.</span>
-                </p>
+                <div class="catalog-extra__product-description">
+                  <p class="catalog-extra__description-quantity">1 упаковка (30 г)</p>
+                  <p class="catalog-extra__description-price">
+                      300 <span class="currency">р.</span>
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <a class="button" href="#">Заказать</a>
-          </li>
-        </ul>
-      </section>
+              <a class="button" href="#">Заказать</a>
+            </li>
+          </ul>
+        </section>
 
-      <section class="special-offer">
-        <h2 class="visually-hidden">Акция</h2>
+        <section class="special-offer">
+          <h2 class="visually-hidden">Акция</h2>
 
-        <p class="special-offer__description">
-          Закажите все<br> и получите чехол для кота в подарок!
-        </p>
-      </section>
+          <p class="special-offer__description">
+            Закажите все<br> и получите чехол для кота в подарок!
+          </p>
+        </section>
+      </div>
     </main>
 
     <footer class="footer">
