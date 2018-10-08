@@ -59,7 +59,8 @@
 }
 
 .program-selection__textarea {
-  padding: 16px;
+  box-sizing: border-box;
+  padding: 13px;
 }
 
 .program-selection__radio-name {
@@ -116,6 +117,10 @@
   margin-bottom: 30px;
 }
 
+.program-selection__checkbox-item {
+  margin-bottom: 18px;
+}
+
 .program-selection__button {
   margin-bottom: 20px;
 }
@@ -131,6 +136,10 @@
 
 @media (min-width: @tablet-width) {
   .program-selection__wrapper {
+    width: 74.48%;
+  }
+
+  .program-selection__wrapper--title {
     width: 92.19%;
   }
 
@@ -142,7 +151,7 @@
     .set-font(custom-font; 20px; 30px);
 
     width: 46.19%;
-    margin-left: 5.79%;
+    margin-left: 9.6%;
     margin-bottom: 72px;
   }
 
@@ -160,7 +169,8 @@
   }
 
   .program-selection__fieldset {
-    margin: 0 5.79%;
+    padding: 0;
+
     border: none;
   }
 
@@ -181,17 +191,10 @@
     margin-bottom: 75px;
   }
 
-  .program-selection__fieldset:last-of-type {
-    .text-reset();
-    margin: 0 5.79%;
-    margin-bottom: 54px;
-  }
-
   .program-selection__checkbox-list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 54px;
   }
 
   .program-selection__checkbox-item {
@@ -199,22 +202,70 @@
     margin-bottom: 32px;
   }
 
-  .program-selection__container {
+  .program-selection__container:last-child {
     display: flex;
     align-items: baseline;
-    margin: 0 5.79%;
+    width: 74.48%;
+    margin: 0 auto;
     margin-bottom: 72px;
   }
 
   .program-selection__button {
-    width: 40%;
+    width: 100%;
     margin: 0;
-    margin-right: 8.5%;
+    margin-right: 10%;
   }
 
   .program-selection__info {
     .set-font(regular-font);
 
     margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program-selection__wrapper {
+    width: 1220px;
+  }
+
+  .program-selection__description {
+    margin-left: 0;
+  }
+
+  .program-selection__container:first-child {
+    display: flex;
+    justify-content: space-between;
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  .program-selection__container:last-child {
+    width: 1220px;
+  }
+
+  .program-selection__wrapper--small {
+    width: 570px;
+  }
+
+  .program-selection__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .program-selection__label--column {
+    width: 570px;
+  }
+
+  .program-selection__checkbox-item {
+    width: 245px;
+  }
+
+  .program-selection__button {
+    width: 568px;
+    margin-right: 80px;
+  }
+
+  .program-selection__info {
+    text-align: left;
   }
 }
