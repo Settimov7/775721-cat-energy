@@ -3,44 +3,50 @@
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
+  white-space: nowrap;
   color: @white;
 
   display: block;
+  box-sizing: border-box;
   width: 100%;
   padding: 11px 0;
 
-  background-color: @green;
+  background-color: @button-bg-color;
   border: none;
 }
 
 .button:hover,
 .button:focus,
 .button:active {
-  background-color: @dark-green;
+  background-color: @button-bg-color-hover;
 }
 
 .button:active {
-  color: fade(@white, 70%);
+  color: @button-text-color-active;
 }
 
 .button--gray {
-  color: @gray;
+  color: @button-gray-text-color;
 
-  background: @gray-bg;
+  background: @button-gray-bg-color;
 }
 
 .button--gray:hover,
 .button--gray:focus,
 .button--gray:active {
-  background-color: @dark-gray-bg;
+  background-color: @button-gray-bg-color-hover;
 }
 
 .button--gray:active {
-  color: fade(@gray, 70%);
+  color: @button-gray-text-color-active;
 }
 
 @media (min-width: @tablet-width) {
   .button {
     .set-font(custom-font; 16px; 20px);
+
+    padding: 16px 28px;
   }
 }
+
+//Уточнить размеры кнопки на всех версиях макета

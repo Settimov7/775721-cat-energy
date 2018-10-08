@@ -10,13 +10,13 @@
   .set-font(custom-font, 20px, 20px, 500);
   text-transform: uppercase;
   text-decoration: none;
-  color: @black;
+  color: @text-color-black;
   text-align: center;
 
   display: block;
   padding: 20px;
 
-  border-bottom: 1px solid @light-gray;
+  border-bottom: 1px solid @menu-border-color;
 }
 
 .main-navigation__menu-item:hover:not(.main-navigation__menu-item--active),
@@ -43,7 +43,7 @@
   .main-navigation__menu-link {
     .set-font(custom-font; 18px; 25px);
 
-    .text-reset();
+    padding: 0;
 
     border: none;
   }
@@ -58,7 +58,7 @@
 
   .main-navigation__menu-item--active {
     padding-bottom: 7px;
-    border-bottom: 2px solid @green;
+    border-bottom: 2px solid @menu-active-border-color;
   }
 }
 

@@ -4,22 +4,21 @@
 }
 
 .cooperation--gray {
-  background-color: @gray-bg;
+  background-color: @bg-color-gray;
   padding-top: 25px;
 }
 
 .cooperation__wrapper {
   display: flex;
   justify-content: space-between;
-  width: 87.5%;
-  margin: 0 auto;
+  .center(@mobile-width-percent);
 }
 
 .cooperation__title {
   .set-font(custom-font; 16px; 20px);
   text-transform: uppercase;
 
-  .text-reset();
+  .reset-indents();
   display: block;
   width: 44%;
 }
@@ -27,7 +26,7 @@
 .cooperation__adress {
   .set-font(regular-font; 14px; 20px);
   font-style: normal;
-  color: @gray;
+  color: @text-color-gray;
 
   display: block;
   width: 50%;
@@ -39,7 +38,7 @@
   }
 
   .cooperation__wrapper {
-    width: 92.19%;
+    .center(@tablet-width-percent);
   }
 
   .cooperation__title {
