@@ -1,32 +1,120 @@
+.catalog-extra {
+  width: 87.5%;
+  margin: 0 auto;
+  margin-bottom: 39px;
+}
+
 .catalog-extra__title {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 400;
+  .set-font(custom-font; 24px; 24px);
+
+  .text-reset();
+  padding: 31px 0;
+  border-bottom: 1px solid fade(@gray, 10%);
 }
 
 .catalog-extra__list {
   .list-reset();
 }
 
+.catalog-extra__item {
+  padding: 17px 0;
+  border-bottom: 1px solid fade(@gray, 10%);
+}
+
 .catalog-extra__product-title {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 400;
+  .set-font(custom-font);
   text-transform: uppercase;
   text-decoration: none;
   color: @black;
+
+  display: block;
+  margin-bottom: 14px;
 }
 
 .catalog-extra__product-description {
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 400;
+  .set-font(regular-font; 14px; 14px);
   color: @gray;
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
 }
 
-.catalog-extra__description-price--uppercase {
-  text-transform: uppercase;
+@media (min-width: @tablet-width) {
+  .catalog-extra {
+    width: 92.19%;
+  }
+
+  .catalog-extra__title {
+    .set-font(custom-font; 36px; 36px);
+
+    border: none;
+  }
+
+  .catalog-extra__item {
+    padding: 28px 37px;
+
+    border-bottom: 1px solid fade(@gray, 25%);
+  }
+
+  .catalog-extra__item:first-of-type {
+    border-top: 1px solid fade(@gray, 25%);
+  }
+
+  .catalog-exatra__item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .catalog-extra__product-title {
+    .set-font(custom-font; 20px; 20px);
+  }
+
+  .catalog-extra__product-description {
+    .set-font(regular-font; 16px; 20px);
+  }
+
+  .catalog-extra__description-quantity {
+    margin-right: 53px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-extra {
+    width: 895px;
+    .text-reset();
+  }
+
+  .catalog-extra__title {
+    margin-bottom: 74px;
+  }
+
+  .catalog-extra__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 16px;
+  }
+
+  .catalog-extra__product-title {
+    width: 245px;
+    margin: 0;
+  }
+
+  .catalog-extra__product-description {
+    margin: 0;
+  }
+
+  .catalog-extra__description-quantity {
+    width: 245px;
+    margin: 0;
+  }
+
+  .catalog-extra__description-price {
+    width: 80px;
+    margin: 0;
+  }
 }

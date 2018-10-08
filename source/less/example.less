@@ -1,48 +1,232 @@
 .example {
   color: @black;
 
+  margin-bottom: 28px;
+  padding-top: 22px;
+  padding-bottom: 39px;
+
   background-color: @gray-bg;
 }
 
+.example__wrapper {
+  width: 87.5%;
+  margin: 0 auto;
+}
+
 .example__title {
-  .regular-heading-font();
+  .set-font(custom-font; 36px; 60px);
+
+  .text-reset();
+  margin-bottom: 28px;
 }
 
 .example__description {
+  .set-font(regular-font; 14px; 18px);
   color: @gray;
+
+  .text-reset();
+  margin-bottom: 28px;
+}
+
+.example__data {
+  position: relative;
+
+  font-size: 0;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.example__data-field-row {
+  position: absolute;
+  top: 55px;
+  left: 20px;
 }
 
 .example__data-field {
-  font-family: "Arial", sans-serif;
-  font-size: 12px;
-  line-height: 12px;
-  font-weight: 400;
+  .set-font(regular-font; 12px; 12px);
   text-transform: lowercase;
   color: @gray;
+
+  display: inline-block;
+  box-sizing: border-box;
+  width: 87px;
+  padding: 0 15px;
+  margin-right: 66px;
+
+  background-color: @gray-bg;
+}
+
+.example__data-field:last-child {
+  margin-right: 0;
 }
 
 .example__data-value {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 400;
+  .set-font(custom-font; 24px; 24px);
   text-transform: uppercase;
+  text-align: center;
+
+  display: inline-block;
+  box-sizing: border-box;
+  width: 124px;
+  padding: 18px 0;
+  margin-right: 28px;
+
+  border: 1px solid @input-border-color;
+  border-radius: 3px;
+}
+
+.example__data-value:last-child {
+  margin-right: 0;
 }
 
 .example__cost {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
+  .set-font(custom-font; 14px; 20px);
   text-transform: uppercase;
+  text-align: center;
+
+  .text-reset();
 }
 
 .example__toggle-status {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
+  .set-font(custom-font; 16px; 20px);
   text-transform: uppercase;
   text-decoration: none;
   color: @black;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    color: @black;
+    padding-top: 53px;
+    padding-bottom: 0;
+    margin-bottom: 70px;
+
+    background: linear-gradient(to bottom, @white 57%, @gray-bg 57%);
+    border-top: 1px solid fade(@gray, 10%);
+  }
+
+  .example__wrapper {
+    width: 92.19%;
+  }
+
+  .example__title {
+    .set-font(custom-font; 60px; 60px);
+    margin-bottom: 68px;
+  }
+
+  .example__description {
+    .set-font(regular-font; 16px; 24px);
+
+    width: 95.6%;
+    margin-bottom: 55px;
+  }
+
+  .example__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 256px;
+  }
+
+  .example__data {
+    .text-reset();
+  }
+
+  .example__data-value {
+    .set-font(custom-font; 30px; 37px);
+
+    width: 162px;
+    margin-right: 42px;
+  }
+
+  .example__data-field {
+    .set-font(regular-font; 14px; 14px);
+    white-space: nowrap;
+
+    width: 116px;
+    margin-right: 75px;
+    padding: 0 10px;
+
+    background-color: @white;
+  }
+
+  .example__data-field:last-child {
+    width: 140px;
+  }
+
+  .example__data-field-row {
+    top: 70px;
+    left: 25px;
+  }
+
+  .example__cost {
+    .set-font(custom-font; 20px; 20px);
+    text-align: right;
+    width: 27.12%;
+  }
+
+  .example__cost-value {
+    display: inline-block;
+  }
+
+  .example__slider {
+    padding-top: 368px;
+    padding-bottom: 83px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    padding: 0;
+
+    border: none;
+    background: linear-gradient(to bottom, @white 21.6%, @gray-bg 21.6%);
+  }
+
+  .example__wrapper {
+    width: 1220px;
+  }
+
+  .example__title {
+    width: 1220px;
+    margin: 0 auto;
+    margin-bottom: 175px;
+  }
+
+  .example__container {
+    width: 570px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
+
+  .example__data {
+    width: 370px;
+    margin-bottom: 62px;
+  }
+
+  .example__data-field {
+    background-color: @gray-bg;
+  }
+
+  .example__cost {
+    text-align: left;
+    width: 335px;
+  }
+
+  .example__cost-value {
+    margin-left: 65px;
+  }
+
+  .example__slider {
+    width: 610px;
+    padding: 0;
+  }
+
+  .example__container-columns {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 76px;
+  }
 }

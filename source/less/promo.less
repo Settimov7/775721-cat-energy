@@ -1,23 +1,112 @@
-.promo__wrapper {
+.promo {
   color: @white;
 
+  padding-top: 32px;
+  margin-bottom: 22px;
+
+  background: url("../img/index-background-mobile@1x.jpg") no-repeat 0 0,
+    linear-gradient(to bottom, @green 63.4%, @white 63.4%);
+
   background-color: @green;
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+}
+
+.promo__container {
+  position: relative;
+  width: 87.5%;
+  margin: 0 auto;
 }
 
 .promo__title {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 400;
+  .set-font(custom-font; 36px; 36px);
+  text-align: center;
+
+  .text-reset();
+  margin-bottom: 20px;
 }
 
 .promo__text {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 400;
+  .set-font(custom-font; 14px; 14px);
   text-transform: uppercase;
+  text-align: center;
+
+  .text-reset();
+  margin-bottom: 303px;
+}
+
+.promo__button {
+
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    color: @black;
+
+    background-color: @white;
+    background-image: none;
+  }
+
+  .promo__container {
+    width: 55.6%;
+    .text-reset();
+    margin-left: 15.63%;
+  }
+
+  .promo__title {
+    .set-font(custom-font; 60px; 60px);
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .promo__text {
+    .set-font(custom-font; 20px; 20px);
+    text-align: left;
+
+    .text-reset();
+    margin-bottom: 45px;
+  }
+
+  .promo__button {
+    position: static;
+
+    .set-font(custom-font; 20px; 20px);
+
+    width: 57.4%;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    padding-bottom: 190px;
+    margin-bottom: 80px;
+
+    background:
+      url("../img/index-background-desktop@1x.jpg") no-repeat 100% -146px,
+      linear-gradient(to right, @white 50%, @green 50%);
+  }
+
+  .promo__button {
+    width: 245px;
+    margin: 0;
+  }
+
+  .promo__container {
+    box-sizing: border-box;
+    width: 1220px;
+    padding: 0 81px;
+    margin: 0 auto;
+  }
+
+  .promo__title {
+    width: 415px;
+    .text-reset();
+    margin-bottom: 45px;
+  }
+
+  .promo__text {
+    .text-reset();
+    margin-bottom: 50px;
+  }
 }

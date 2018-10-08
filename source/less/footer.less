@@ -1,11 +1,15 @@
 .footer {
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
   color: @black;
 
   background-color: @gray-bg;
+}
+
+.footer__logo {
+  text-align: center;
+
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 31px;
 }
 
 .footer__logo:hover,
@@ -18,12 +22,13 @@
 }
 
 .footer__developed-by-link {
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 400;
+  .set-font(regular-font);
   text-decoration: none;
   color: @gray;
+
+  display: block;
+  width: 87.5%;
+  margin: 0 auto;
 }
 
 .footer__developed-by-link--uppercase {
@@ -32,4 +37,24 @@
 
 .footer__developed-by-link:active {
   opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 92.19%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+  }
+
+  .footer__logo {
+    .text-reset();
+  }
+
+  .footer__developed-by-link {
+    .text-reset();
+    width: 22.88%;
+  }
 }

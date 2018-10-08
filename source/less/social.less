@@ -1,8 +1,26 @@
 .social__list {
   .list-reset();
+  text-align: center;
+
+  display: flex;
+  width: 87.5%;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 23px 0;
+  justify-content: space-between;
+
+  border: 1px solid fade(@gray, 10%);
+  border-left: none;
+  border-right: none;
 }
 
 .social__link {
   text-decoration: none;
   color: @black;
+}
+
+@media (min-width: @tablet-width) {
+  .social__list {
+    .text-reset();
+  }
 }

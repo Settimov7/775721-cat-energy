@@ -1,3 +1,7 @@
+.programs-description {
+  margin-bottom: 10px;
+}
+
 .programs-description__list {
   .list-reset();
 }
@@ -5,31 +9,116 @@
 .programs-description__item {
   color: @black;
 
+  width: 87.5%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
   background-color: @gray-bg;
 }
 
-.programs-description__description {
-  color: @gray;
+.programs-description__title {
+  .set-font(custom-font; 24px; 37px);
+  text-transform: uppercase;
+
+  .text-reset();
+  padding-left: 91px;
+  padding-top: 27px;
+  margin-bottom: 20px;
 }
 
-.programs-description__title {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 24px;
-  line-height: 37px;
-  font-weight: 400;
-  text-transform: uppercase;
+.programs-description__description {
+  .set-font(regular-font; 14px; 18px);
+  color: @gray;
+
+  .text-reset();
+  margin: 0 20px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid fade(@gray, 10%);
 }
 
 .programs-description__link {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 400;
+  .set-font(custom-font);
   text-transform: uppercase;
   text-decoration: none;
   color: @black;
+
+  display: block;
+  padding: 20px;
 }
 
 .programs-description__link:active {
   color: fade(@black, 70%);
+}
+
+@media (min-width: @tablet-width) {
+  .programs-description__item {
+    box-sizing: border-box;
+    width: 92.19%;
+    margin-bottom: 30px;
+    padding-left: 53px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .programs-description__title {
+    .set-font(custom-font; 36px; 37px);
+
+    .text-reset;
+    margin-bottom: 25px;
+  }
+
+  .programs-description__description {
+    .set-font(regular-font; 16px; 24px);
+
+    .text-reset();
+    width: 57%;
+    margin-bottom: 60px;
+
+    border: none;
+  }
+
+  .programs-description__description:last-of-type {
+    width: 52%;
+  }
+
+  .programs-description__link {
+    .set-font(custom-font; 20px; 20px);
+
+    .text-reset();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs-description {
+    width: 1220px;
+    margin: 0 auto;
+    margin-bottom: 82px;
+  }
+
+  .programs-description__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .programs-description__item {
+    width: 570px;
+    .text-reset();
+    padding: 63px 52px;
+    padding-top: 82px;
+  }
+
+  .programs-description__description:last-of-type {
+    width: auto;
+  }
+
+  .programs-description__title {
+    margin-left: 162px;
+    margin-bottom: 74px;
+  }
+
+  .programs-description__description {
+    width: 465px;
+    margin-bottom: 40px;
+  }
 }
