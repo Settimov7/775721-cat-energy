@@ -9,7 +9,7 @@
   padding: 23px 0;
   justify-content: space-between;
 
-  border: 1px solid fade(@gray, 10%);
+  border: 1px solid @social-border-color;
   border-left: none;
   border-right: none;
 }
@@ -21,6 +21,7 @@
 
 @media (min-width: @tablet-width) {
   .social__list {
-    .text-reset();
+    width: 100%;
+    .reset-indents();
   }
 }

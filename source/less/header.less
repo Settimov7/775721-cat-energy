@@ -1,5 +1,5 @@
 .header {
-  color: @black;
+  color: @text-color-black;
 
   background-color: @white;
 }
@@ -19,7 +19,7 @@
   padding-top: 11px;
   padding-bottom: 16px;
 
-  border-bottom: 1px solid @light-gray;
+  border-bottom: 1px solid @menu-border-color;
 }
 
 
@@ -27,8 +27,7 @@
   .header__container {
     display: flex;
     justify-content: space-between;
-    width: 92.19%;
-    margin: 0 auto;
+    .center(@tablet-width-percent);
   }
 
   .header__logo {
@@ -43,10 +42,11 @@
   .header--green {
     background:
       url("../img/index-background-desktop@1x.jpg") no-repeat 100% 0,
-      linear-gradient(to right, @white 50%, @green 50%);
+      linear-gradient(to right, @white 50%, @bg-color-green 50%);
+    background-color: @bg-color-green;
   }
 
   .header__container {
-    width: 1220px;
+    width: @desktop-fix-width;
   }
 }
