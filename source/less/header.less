@@ -4,6 +4,16 @@
   background-color: @white;
 }
 
+.header__logo {
+  box-sizing: border-box;
+  display: block;
+  padding-left: 20px;
+  padding-top: 11px;
+  padding-bottom: 16px;
+
+  border-bottom: 1px solid @menu-border-color;
+}
+
 .header__logo[href*="index"]:hover,
 .header__logo[href*="index"]:focus {
   opacity: 0.8;
@@ -11,15 +21,6 @@
 
 .header__logo[href*="index"]:active {
   opacity: 0.6;
-}
-
-.header__logo {
-  display: block;
-  padding-left: 20px;
-  padding-top: 11px;
-  padding-bottom: 16px;
-
-  border-bottom: 1px solid @menu-border-color;
 }
 
 
