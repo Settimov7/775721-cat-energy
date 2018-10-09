@@ -15,8 +15,10 @@
           <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="37" alt="Зоомагазин &laquo;Cat Energy&raquo;">
         </a>
 
-        <nav class="main-navigation">
-          <a class="main-navigation__toggle" href="#">Открыть меню</a>
+        <nav class="main-navigation main-navigation--opened main-navigation--nojs">
+          <a class="main-navigation__toggle" href="#">
+            <span class="visually-hidden">Открыть меню</span>
+          </a>
           <ul class="main-navigation__menu-list">
             <li class="main-navigation__menu-item main-navigation__menu-item--active main-navigation__menu-item--white">
               <a class="main-navigation__menu-link main-navigation__menu-link--white">Главная</a>
@@ -190,5 +192,6 @@
         </a>
       </div>
     </footer>
+    <script src="/js/menu.js"></script>
   </body>
 </html>
