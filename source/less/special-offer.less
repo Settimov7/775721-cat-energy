@@ -1,7 +1,11 @@
 .special-offer {
+  position: relative;
+
   color: @white;
 
+  box-sizing: border-box;
   .center(@mobile-width-percent);
+  min-height: 289px;
   padding-top: 185px;
   padding-bottom: 40px;
   margin-bottom: 35px;
@@ -9,7 +13,7 @@
   background-color: @bg-color-green;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center 0;
 }
 
 .special-offer__description {
@@ -17,12 +21,31 @@
   text-align: center;
 
   .center(60.7%);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    top: 65px;
+    left: 0;
+    right: 0;
+
+    width: 55px;
+    height: 60px;
+    margin: 0 auto;
+
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .special-offer {
     .center(@tablet-width-percent);
 
+    min-height: 200px;
     padding-top: 72px;
     padding-bottom: 68px;
     margin-bottom: 76px;
@@ -36,14 +59,20 @@
 
     width: 23.31%;
     margin-left: 59.75%;
+
+    &::before {
+      left: 12.85%;
+      right: auto;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .special-offer {
     width: 245px;
+    height: 285px;
     .reset-indents();
-    margin-top: 172px;
+    margin-right: 110px;
 
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-color: @bg-color-green;

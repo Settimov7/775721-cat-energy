@@ -1,4 +1,6 @@
 .more-items {
+  position: relative;
+
   text-align: center;
 
   padding-top: 80px;
@@ -17,6 +19,24 @@
   .reset-indents();
   display: block;
   margin-bottom: 10px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 27px;
+    left: 0;
+    right: 0;
+
+    width: 30px;
+    height: 30px;
+    margin: auto;
+
+    opacity: 0.2;
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 }
 
 .more-items__description {
@@ -42,6 +62,16 @@
     .center(56%);
     margin-top: 100px;
     margin-bottom: 25px;
+
+    &::before {
+      top: 55px;
+
+      width: 60px;
+      height: 60px;
+
+      opacity: 0.2;
+      background-image: url("../img/icon-plus.svg");
+    }
   }
 
   .more-items__description {
