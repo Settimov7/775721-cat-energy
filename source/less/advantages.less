@@ -14,12 +14,36 @@
   .list-reset();
 }
 
+.advantages__item {
+  position: relative;
+
+  display: flex;
+  min-height: 60px;
+  margin-bottom: 20px;
+
+  &:first-child::after {
+    .advantages_icon(mobile; url("../img/advantage-leaf@1x.png"));
+  }
+
+  &:nth-child(2)::after {
+    .advantages_icon(mobile; url("../img/advantage-powder@1x.png"));
+  }
+
+  &:nth-child(3)::after {
+    .advantages_icon(mobile; url("../img/advantage-dining@1x.png"));
+  }
+
+  &:last-child::after {
+    .advantages_icon(mobile; url("../img/advantage-clock@1x.png"));
+  }
+}
+
 .advantages__description {
   .set-font(regular-font; 14px; 18px);
   color: @text-color-gray;
 
   padding-left: 80px;
-  margin-bottom: 20px;
+  margin: auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -40,9 +64,51 @@
   }
 
   .advantages__item {
+    z-index: 1;
+
     width: 45.76%;
     margin-bottom: 89px;
     padding-top: 115px;
+
+    &:first-child {
+      &::after {
+        .advantages_icon(tablet; url("../img/advantage-leaf@1x.png"));
+      }
+
+      &::before {
+        .advantages_number(one);
+      }
+    }
+
+    &:nth-child(2) {
+      &::after {
+        .advantages_icon(tablet; url("../img/advantage-powder@1x.png"));
+      }
+
+      &::before {
+        .advantages_number(two);
+      }
+    }
+
+    &:nth-child(3) {
+      &::after {
+        .advantages_icon(tablet; url("../img/advantage-dining@1x.png"));
+      }
+
+      &::before {
+        .advantages_number(three);
+      }
+    }
+
+    &:last-child {
+      &::after {
+      .advantages_icon(tablet; url("../img/advantage-clock@1x.png"));
+      }
+
+      &::before {
+        .advantages_number(four);
+      }
+    }
   }
 
   .advantages__description {
@@ -62,9 +128,37 @@
 
   .advantages__item {
     width: 245px;
+
+    &:first-child {
+      &::before {
+        .advantages_number(one; 100px);
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        .advantages_number(two; 100px);
+      }
+    }
+
+    &:nth-child(3) {
+      &::before {
+        .advantages_number(three; 100px);
+      }
+    }
+
+    &:last-child {
+      &::before {
+        .advantages_number(four; 100px);
+      }
+
+      .advantages__description {
+        width: 245px;
+      }
+    }
   }
 
   .advantages__description {
-    width: 100%;
+    width: 200px;
   }
 }

@@ -3,11 +3,15 @@
   text-align: center;
 
   display: flex;
+  box-sizing: border-box;
   width: 87.5%;
   margin: 0 auto;
   margin-bottom: 25px;
   padding: 23px 0;
+  padding-left: 73px;
+  padding-right: 82px;
   justify-content: space-between;
+  align-items: center;
 
   border: 1px solid @social-border-color;
   border-left: none;
@@ -19,9 +23,29 @@
   color: @text-color-black;
 }
 
+.social__link svg {
+  fill: @social-icon-color-gray;
+
+  &:last-of-type {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .social__list {
-    width: 100%;
+    width: 130px;
     .reset-indents();
+
+    border: none;
+  }
+
+  .social__link svg {
+    &:first-of-type {
+      display: none;
+    }
+
+    &:last-of-type {
+      display: block;
+    }
   }
 }

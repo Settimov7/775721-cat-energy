@@ -83,6 +83,47 @@
   text-align: center;
 }
 
+.example__slider {
+  position: relative;
+  .center(@mobile-width);
+}
+
+.example__slide-list {
+  height: 240px;
+  .list-reset();
+  margin-bottom: 35px;
+}
+
+.example__slide {
+  position: absolute;
+  z-index: 0;
+
+  width: 320px;
+  height: 240px;
+
+  background-color: @bg-color-gray;
+  background-position: center 0;
+  background-repeat: no-repeat;
+}
+
+.example__slide:first-child {
+  background-image: url("../img/before-mobile@1x.png");
+}
+
+.example__slide:last-child {
+  background-image: url("../img/after-mobile@1x.png");
+}
+
+.example__slide--active {
+  z-index: 1;
+}
+
+.example__toggle {
+  display: flex;
+  justify-content: space-between;
+  .center(200px);
+}
+
 .example__toggle-status {
   .set-font(custom-font; 16px; 20px);
   text-transform: uppercase;
@@ -90,15 +131,48 @@
   color: @text-color-black;
 }
 
+@media (max-width: @mobile-width-only) {
+  .example__toggle-range {
+    width: 84px;
+    height: 14px;
+
+    box-sizing: border-box;
+    padding: 4px 6px;
+
+    background-color: @white;
+    border-radius: 6px;
+  }
+
+  .example__toggle-toddler {
+    width: 35px;
+    height: 6px;
+
+    background-color: @bg-color-green;
+    border-radius: 3px;
+
+    cursor: pointer;
+
+    &--left {
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    &--right {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+}
+
 @media (min-width: @tablet-width) {
   .example {
     color: @text-color-black;
 
     padding-top: 53px;
-    padding-bottom: 0;
+    padding-bottom: 78px;
     margin-bottom: 70px;
 
-    background: linear-gradient(to bottom, @white 57%, @bg-color-gray 57%);
+    background: linear-gradient(to bottom, @white 57.35%, @bg-color-gray 57.35%);
     border-top: 1px solid @menu-border-color;
   }
 
@@ -121,9 +195,12 @@
   .example__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 256px;
+    margin-bottom: 90px;
+  }
+
+  .example__data {
+    margin-right: 120px;
   }
 
   .example__data-value {
@@ -142,10 +219,10 @@
     padding: 0 10px;
 
     background-color: @white;
-  }
 
-  .example__data-field:last-child {
-    width: 140px;
+    &:last-child {
+      width: 140px;
+    }
   }
 
   .example__data-field-row {
@@ -156,22 +233,103 @@
   .example__cost {
     .set-font(custom-font; 20px; 20px);
     text-align: right;
-    width: 27.12%;
+
+    width: 176px;
+    margin-right: auto;
   }
 
   .example__cost-value {
     display: inline-block;
   }
 
+  .example__slide-list {
+    height: 517px;
+  }
+
   .example__slider {
-    padding-top: 368px;
-    padding-bottom: 83px;
+    width: 690px;
+  }
+
+  .example__slide {
+    width: 690px;
+    height: 517px;
+
+    background-color: transparent;
+
+    &:first-child {
+      width: 690;
+      background-image: url("../img/before-tablet@1x.png");
+    }
+
+    &:last-child {
+      background-image: url("../img/after-tablet@1x.png");
+    }
+  }
+
+  .example__toggle {
+    width: 573px;
+  }
+
+  .example__toggle-status {
+    .set-font(custom-font; 20px; 20px);
+
+    padding-bottom: 6px;
+
+    border-bottom: 1px dotted @example-border-color;
+  }
+
+  .example__toggle-range {
+    position: relative;
+
+    width: 428px;
+    height: 6px;
+
+    margin: 7px 0;
+
+    background-color: @toggle-range-color;
+    border-radius: 2.5px;
+  }
+
+  .example__toggle-toddler {
+    position: absolute;
+
+    top: -14px;
+    left: 197px;
+
+    width: 34px;
+    height: 34px;
+
+    background-color: @white;
+    border: 1px solid @toggle-range-color;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    &:active {
+      border-color: @bg-color-green;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 8px;
+      height: 8px;
+      margin: -4px -4px;
+
+      background-color: @bg-color-green;
+      border-radius: 50%;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
     padding: 0;
+    margin: 0;
 
     border: none;
     background: linear-gradient(to bottom, @white 21.6%, @bg-color-gray 21.6%);
@@ -194,6 +352,7 @@
 
   .example__data {
     width: 370px;
+    margin: 0;
     margin-bottom: 62px;
   }
 
@@ -213,6 +372,8 @@
   .example__slider {
     width: 610px;
     padding: 0;
+
+    margin-top: -225px;
   }
 
   .example__container-columns {

@@ -29,3 +29,55 @@
   line-height: @line-height;
   font-weight: @font-weight;
 }
+
+.advantages_icon(mobile; @image-url) {
+  width: 60px;
+  height: 60px;
+
+  background-image: @image-url;
+}
+
+.advantages_icon(tablet; @image-url) {
+  width: 80px;
+  height: 80px;
+
+  background-image: @image-url;
+}
+
+.advantages_icon(@_; @image-url) {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: @bg-color-green;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.advantages_number(one; @left:29%) {
+  content: "1";
+}
+
+.advantages_number(two; @left:29%) {
+  content: "2";
+}
+
+.advantages_number(three; @left:29%) {
+  content: "3";
+}
+
+.advantages_number(four; @left:29%) {
+  content: "4";
+}
+
+.advantages_number(@_; @left:29%) {
+  .set-font(custom-font; 271px; 271px);
+  color: #f2f2f2;
+
+  position: absolute;
+  z-index: -1;
+  top: -40px;
+  left: @left;
+}

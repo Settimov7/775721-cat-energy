@@ -8,11 +8,39 @@
 }
 
 .programs-description__item {
+  position: relative;
+
   color: @text-color-black;
 
   margin-bottom: 20px;
 
   background-color: @bg-color-gray;
+
+  &:first-child .programs-description__title::after {
+    content: "";
+
+    position: absolute;
+    top: 22px;
+    left: 30px;
+
+    width: 35px;
+    height: 49px;
+
+    background-image: url("../img/icon-cat-slim.svg");
+  }
+
+  &:last-child .programs-description__title::after {
+    content: "";
+
+    position: absolute;
+    top: 35px;
+    left: 13px;
+
+    width: 67px;
+    height: 28px;
+
+    background-image: url("../img/icon-cat-pro.svg");
+  }
 }
 
 .programs-description__title {
@@ -23,6 +51,20 @@
   padding-left: 91px;
   padding-top: 27px;
   margin-bottom: 20px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 25px;
+    left: 22px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: @bg-color-green;
+    border-radius: 50%;
+  }
 }
 
 .programs-description__description {
@@ -36,6 +78,8 @@
 }
 
 .programs-description__link {
+  position: relative;
+
   .set-font(custom-font);
   text-transform: uppercase;
   text-decoration: none;
@@ -43,10 +87,36 @@
 
   display: block;
   padding: 20px;
-}
 
-.programs-description__link:active {
-  color: @description-link-active-color;
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 22px;
+    left: 117px;
+
+    width: 24px;
+    height: 11px;
+
+    background-image: url("../img/icon-right-arrow-long.svg");
+  }
+
+  &:active {
+    color: @description-link-active-color;
+  }
+
+  &:hover::after {
+    width: 32px;
+
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active::after {
+    width: 32px;
+
+    opacity: 0.3;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -60,6 +130,28 @@
     padding-left: 53px;
     padding-top: 80px;
     padding-bottom: 60px;
+
+    &:first-child .programs-description__title::after {
+      top: 80px;
+      left: auto;
+      right: 92px;
+
+      width: 140px;
+      height: 194px;
+    }
+
+    &:last-child .programs-description__title::after {
+      top: 135px;
+      left: auto;
+      right: 28px;
+
+      width: 268px;
+      height: 112px;
+    }
+
+    &:last-child .programs-description__description {
+      width: 52.37%;
+    }
   }
 
   .programs-description__title {
@@ -67,13 +159,22 @@
 
     padding: 0;
     margin-bottom: 25px;
+
+    &::before {
+      top: 92px;
+      left: auto;
+      right: 62px;
+
+      width: 200px;
+      height: 200px;
+    }
   }
 
   .programs-description__description {
     .set-font(regular-font; 16px; 24px);
 
     .reset-indents();
-    width: 57%;
+    width: 56.79%;
     margin-bottom: 60px;
 
     border: none;
@@ -83,6 +184,12 @@
     .set-font(custom-font; 20px; 20px);
 
     .reset-indents();
+
+    &::after {
+      top: auto;
+      left: 132px;
+      bottom: 4px;
+    }
   }
 }
 
@@ -102,11 +209,42 @@
     margin: 0;
     padding: 63px 52px;
     padding-top: 82px;
+
+    &:first-child .programs-description__title::after {
+      top: 41px;
+      left: 66px;
+      right: auto;
+
+      width: 70px;
+      height: 97px;
+    }
+
+    &:last-child .programs-description__title::after {
+      top: 69px;
+      left: 34px;
+      right: auto;
+
+      width: 134px;
+      height: 56px;
+    }
+
+    &:last-child .programs-description__description {
+      width: auto;
+    }
   }
 
   .programs-description__title {
     margin-left: 162px;
     margin-bottom: 74px;
+
+    &::before {
+      top: 47px;
+      left: 52px;
+      right: auto;
+
+      width: 100px;
+      height: 100px;
+    }
   }
 
   .programs-description__description {
