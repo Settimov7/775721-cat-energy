@@ -9,7 +9,7 @@
   box-sizing: border-box;
   padding-left: 20px;
   padding-top: 11px;
-  padding-bottom: 16px;
+  padding-bottom: 13px;
 
   border-bottom: 1px solid @menu-border-color;
 }
@@ -25,6 +25,10 @@
 
 
 @media (min-width: @tablet-width) {
+  .header {
+    margin-bottom: 34px;
+  }
+
   .header__container {
     display: flex;
     justify-content: space-between;
@@ -32,6 +36,7 @@
   }
 
   .header__logo {
+    width: 192px;
     padding: 0;
     margin-top: 24px;
 
@@ -40,6 +45,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .header {
+    padding-top: 32px;
+    margin: 0;
+  }
+
   .header--green {
     background:
       url("../img/index-background-desktop@1x.jpg") no-repeat 100% 0,

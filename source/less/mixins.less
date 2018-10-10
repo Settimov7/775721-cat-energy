@@ -14,15 +14,15 @@
   margin: 0 auto;
 }
 
-.set-font(regular-font; @font-size:16px; @line-height:16px; @font-weight: 400;) {
+.set-font(regular-font; @font-size:16px; @line-height:16px; @font-weight: normal;) {
   font-family: "Arial", sans-serif;
 }
 
-.set-font(custom-font; @font-size:16px; @line-height:16px; @font-weight: 400;) {
+.set-font(custom-font; @font-size:16px; @line-height:16px; @font-weight: normal;) {
   font-family: "Oswald", "Arial", sans-serif;
 }
 
-.set-font (@_; @font-size:16px; @line-height:16px; @font-weight: 400;) {
+.set-font (@_; @font-size:16px; @line-height:16px; @font-weight: normal;) {
   font-size: @font-size;
   line-height: @line-height;
   font-weight: @font-weight;
@@ -54,29 +54,29 @@
   background-repeat: no-repeat;
 }
 
-.advantages_number(one; @left:29%) {
+.advantages_number(one; @left:34%) {
   content: "1";
 }
 
-.advantages_number(two; @left:29%) {
+.advantages_number(two; @left:34%) {
   content: "2";
 }
 
-.advantages_number(three; @left:29%) {
+.advantages_number(three; @left:34%) {
   content: "3";
 }
 
-.advantages_number(four; @left:29%) {
+.advantages_number(four; @left:34%) {
   content: "4";
 }
 
-.advantages_number(@_; @left:29%) {
-  .set-font(custom-font; 271px; 271px);
+.advantages_number(@_; @left:34%) {
+  .set-font(custom-font; 281px; 281px);
   color: #f2f2f2;
 
   position: absolute;
   z-index: -1;
-  top: -40px;
+  top: -38px;
   left: @left;
 }
 

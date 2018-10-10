@@ -32,6 +32,11 @@
   justify-content: space-between;
   align-items: center;
   .center(@mobile-width-percent);
+  padding-top: 6px;
+
+  &--uppercase {
+    margin-right: 1px;
+  }
 }
 
 .footer__developed-by-link svg {
@@ -57,12 +62,18 @@
   }
 
   .footer__logo {
+    width: 132px;
     .reset-indents();
   }
 
   .footer__developed-by-link {
     width: 162px;
     .reset-indents();
+    padding-bottom: 10px;
+
+    &--uppercase {
+      margin-right: 2px;
+    }
   }
 }
 

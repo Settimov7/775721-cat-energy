@@ -26,8 +26,8 @@
 
     width: 24px;
     height: 18px;
-    margin-right: -12px;
-    margin-top: -9px;
+    margin-top: -4px;
+    margin-left: 1px;
 
     background-image: url("../img/icon-mobile-menu.svg");
   }
@@ -42,8 +42,8 @@
 
     width: 18px;
     height: 18px;
-    margin-right: -9px;
-    margin-top: -9px;
+    margin-top: -4px;
+    margin-left: 3px;
 
     background-image: url("../img/icon-close.svg");
   }
@@ -53,11 +53,12 @@
   .set-font(custom-font, 20px, 20px, 500);
   text-transform: uppercase;
   text-decoration: none;
+  white-space: nowrap;
   color: @text-color-black;
   text-align: center;
 
   display: block;
-  padding: 20px;
+  padding: 22px 20px;
 
   border-bottom: 1px solid @menu-border-color;
 }
@@ -84,9 +85,8 @@
 @media (min-width: @tablet-width) {
   .main-navigation__menu-list {
     display: flex;
-    justify-content: space-between;
-    margin-top: 45px;
-    margin-bottom: 67px;
+    margin: 0;
+    margin-top: 42px;
   }
 
   .main-navigation__toggle {
@@ -102,7 +102,7 @@
   }
 
   .main-navigation__menu-item {
-    margin-right: 38px;
+    margin-right: 35px;
   }
 
   .main-navigation__menu-item:last-child {
@@ -116,6 +116,14 @@
 }
 
 @media (min-width: @desktop-width) {
+  .main-navigation {
+    width: 479px;
+  }
+
+  .main-navigation__menu-link {
+    .set-font(custom-font; 20px; 25px);
+  }
+
   .main-navigation__menu-link--white {
     color: @white;
   }

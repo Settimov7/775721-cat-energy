@@ -1,9 +1,9 @@
 .example {
   color: @text-color-black;
 
-  margin-bottom: 28px;
+  margin-bottom: 27px;
   padding-top: 22px;
-  padding-bottom: 39px;
+  padding-bottom: 35px;
 
   background-color: @bg-color-gray;
 }
@@ -16,14 +16,14 @@
   .set-font(custom-font; 36px; 60px);
 
   .reset-indents();
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 .example__description {
   .set-font(regular-font; 14px; 18px);
   color: @text-color-gray;
 
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 .example__data {
@@ -31,12 +31,12 @@
 
   margin: 0 auto;
   font-size: 0;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .example__data-field-row {
   position: absolute;
-  top: 55px;
+  top: 52px;
   left: 20px;
 }
 
@@ -66,7 +66,7 @@
   display: inline-block;
   box-sizing: border-box;
   width: 124px;
-  padding: 18px 0;
+  padding: 15px 0;
   margin-right: 28px;
 
   border: 1px solid @example-border-color;
@@ -81,11 +81,12 @@
   .set-font(custom-font; 14px; 20px);
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
+  margin-bottom: 33px;
 }
 
 .example__slider {
   position: relative;
-  .center(@mobile-width);
 }
 
 .example__slide-list {
@@ -98,7 +99,7 @@
   position: absolute;
   z-index: 0;
 
-  width: 320px;
+  width: 280px;
   height: 240px;
 
   background-color: @bg-color-gray;
@@ -168,9 +169,9 @@
   .example {
     color: @text-color-black;
 
-    padding-top: 53px;
-    padding-bottom: 78px;
-    margin-bottom: 70px;
+    padding-top: 42px;
+    padding-bottom: 68px;
+    margin-bottom: 64px;
 
     background: linear-gradient(to bottom, @white 57.35%, @bg-color-gray 57.35%);
     border-top: 1px solid @menu-border-color;
@@ -182,31 +183,32 @@
 
   .example__title {
     .set-font(custom-font; 60px; 60px);
-    margin-bottom: 68px;
+    margin-bottom: 50px;
   }
 
   .example__description {
     .set-font(regular-font; 16px; 24px);
 
     width: 95.6%;
-    margin-bottom: 55px;
+    margin-bottom: 48px;
   }
 
   .example__container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 90px;
+    margin-bottom: 88px;
   }
 
   .example__data {
-    margin-right: 120px;
+    margin: 0;
+    margin-right: 165px;
   }
 
   .example__data-value {
     .set-font(custom-font; 30px; 37px);
 
-    width: 162px;
+    width: 160px;
     margin-right: 42px;
   }
 
@@ -215,7 +217,7 @@
     white-space: nowrap;
 
     width: 116px;
-    margin-right: 75px;
+    margin-right: 73px;
     padding: 0 10px;
 
     background-color: @white;
@@ -226,8 +228,8 @@
   }
 
   .example__data-field-row {
-    top: 70px;
-    left: 25px;
+    top: 66px;
+    left: 23px;
   }
 
   .example__cost {
@@ -235,29 +237,32 @@
     text-align: right;
 
     width: 176px;
-    margin-right: auto;
+    margin: 0;
   }
 
   .example__cost-value {
     display: inline-block;
+    margin-top: 10px;
   }
 
   .example__slide-list {
     height: 517px;
+    margin-bottom: 18px;
   }
 
   .example__slider {
-    width: 690px;
+    .center(690px);
   }
 
   .example__slide {
+    left: 7px;
+
     width: 690px;
     height: 517px;
 
     background-color: transparent;
 
     &:first-child {
-      width: 690;
       background-image: url("../img/before-tablet@1x.png");
     }
 
@@ -294,7 +299,7 @@
     position: absolute;
 
     top: -14px;
-    left: 197px;
+    left: 198px;
 
     width: 34px;
     height: 34px;
@@ -330,7 +335,6 @@
   .example {
     padding: 0;
     margin: 0;
-
     border: none;
     background: linear-gradient(to bottom, @white 21.6%, @bg-color-gray 21.6%);
   }
@@ -340,7 +344,7 @@
   }
 
   .example__title {
-    margin-bottom: 175px;
+    margin-bottom: 131px;
   }
 
   .example__container {
@@ -350,10 +354,15 @@
     margin: 0;
   }
 
+  .example__description {
+    width: 433px;
+    margin-bottom: 64px;
+  }
+
   .example__data {
     width: 370px;
     margin: 0;
-    margin-bottom: 62px;
+    margin-bottom: 51px;
   }
 
   .example__data-field {
@@ -366,19 +375,28 @@
   }
 
   .example__cost-value {
-    margin-left: 65px;
+    margin-left: 60px;
   }
 
   .example__slider {
     width: 610px;
     padding: 0;
 
-    margin-top: -225px;
+    margin-top: -245px;
+    margin-right: 47px;
+  }
+
+  .example__slide-list {
+    margin-bottom: 41px;
+  }
+
+  .example__toggle {
+    margin-left: 87px;
   }
 
   .example__container-columns {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 76px;
+    padding-bottom: 69px;
   }
 }
