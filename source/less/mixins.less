@@ -9,8 +9,6 @@
   padding: 0;
 }
 
-//Удалить. Обнулил глобально.
-
 .center (@block-width) {
   width: @block-width;
   margin: 0 auto;
@@ -80,4 +78,46 @@
   z-index: -1;
   top: -40px;
   left: @left;
+}
+
+.title-line-mobile () {
+  content: "";
+
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  width: 10px;
+  height: 3px;
+  margin-top: 7px;
+  margin-left: 25px;
+
+  background-color: @title-line-color;
+}
+
+.title-line-right () {
+  content: "";
+
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  width: 10px;
+  height: 3px;
+  margin-top: 7px;
+  margin-left: 40px;
+
+  background-color: @title-line-color;
+}
+
+.title-line-left (@width:7.5%) {
+  content: "";
+
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  width: @width;
+  height: 3px;
+  margin-top: 7px;
+  margin-right: 40px;
+
+  background-color: @title-line-color;
 }
