@@ -148,16 +148,20 @@
 
 @media (min-width: @desktop-width) {
   .catalog-extra {
-    display: flex;
-    flex-wrap: wrap;
     .reset-indents();
     margin-bottom: 87px;
   }
 
+  .catalog-extra__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    .center(@desktop-fix-width);
+  }
+
   .catalog-extra__list {
     width: 895px;
-    margin-bottom: 0;
-    margin-left: 110px;
+    margin: 0;
+    margin-right: 80px;
   }
 
   .catalog-extra__title {
