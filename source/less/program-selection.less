@@ -76,13 +76,32 @@
   width: 100%;
   padding: 13px 15px;
   margin-bottom: 14px;
+}
 
-  &--tel,
-  &--email {
-    padding-right: 45px;
+.program-selection__input--email {
+  padding-right: 45px;
+
+  & + svg {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    fill: @input-icon-color;
   }
 
-  &--tel + svg {
+  &:active + svg {
+    fill: @form-radio-color;
+  }
+
+  // &:invalid + svg{
+  //   fill: @input-error-border-color;
+  // }
+}
+
+.program-selection__input--tel {
+  padding-right: 45px;
+
+  & + svg {
     position: absolute;
     top: 15px;
     right: 13px;
@@ -90,13 +109,13 @@
     fill: @input-icon-color;
   }
 
-  &--email + svg {
-    position: absolute;
-    top: 18px;
-    right: 18px;
-
-    fill: @input-icon-color;
+  &:active + svg {
+    fill: @form-radio-color;
   }
+
+  // &:invalid + svg{
+  //   fill: @input-error-border-color;
+  // }
 }
 
 .program-selection__textarea {
@@ -109,8 +128,8 @@
     content: "";
 
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 11px;
+    left: 11px;
 
     width: 12px;
     height: 12px;
@@ -118,10 +137,9 @@
     border-radius: 50%;
   }
 
-  &:focus + .program-selection__radio-name {
-    border-color: #663d15;
-    // outline: thin dotted;
-    // outline: 5px auto -webkit-focus-ring-color;
+  &:focus + .program-selection__radio-name::before {
+    border: 1px solid @form-radio-hover-border-color;
+    outline: 5px auto -webkit-focus-ring-color;
   }
 }
 
@@ -144,6 +162,22 @@
     border: 1px solid @form-radio-border-color;
     border-radius: 50%;
   }
+
+  &:active {
+    color: @form-radio-active-text-color;
+  }
+
+  &:hover::before {
+    border: 1px solid @form-radio-hover-border-color;
+  }
+
+  &:active::before {
+    border: 1px solid @form-radio-active-border-color;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
 }
 
 .program-selection__checkbox {
@@ -160,10 +194,8 @@
     background-image: url("../img/icon-tick.svg");
   }
 
-  &:focus + .program-selection__checkbox-name {
-    border-color: #663d15;
-    // outline: thin dotted;
-    // outline: 5px auto -webkit-focus-ring-color;
+  &:focus + .program-selection__checkbox-name::before {
+    outline: 5px auto -webkit-focus-ring-color;
   }
 }
 
@@ -183,6 +215,22 @@
     width: 30px;
     height: 30px;
     border: 1px solid @input-border-color;
+  }
+
+  &:active {
+    color: @form-radio-active-text-color;
+  }
+
+  &:hover::before {
+    border: 1px solid @form-radio-hover-border-color;
+  }
+
+  &:active::before {
+    border: 1px solid @form-radio-active-border-color;
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 }
 

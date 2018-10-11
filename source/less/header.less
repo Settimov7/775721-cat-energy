@@ -14,13 +14,18 @@
   border-bottom: 1px solid @menu-border-color;
 }
 
-.header__logo[href*="index"]:hover,
-.header__logo[href*="index"]:focus {
-  opacity: 0.8;
-}
+.header__logo[href*="index"] {
+  &:hover {
+    opacity: 0.8;
+  }
 
-.header__logo[href*="index"]:active {
-  opacity: 0.6;
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 

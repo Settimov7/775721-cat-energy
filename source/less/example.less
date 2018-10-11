@@ -52,10 +52,10 @@
   margin-right: 66px;
 
   background-color: @bg-color-gray;
-}
 
-.example__data-field:last-child {
-  margin-right: 0;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .example__data-value {
@@ -71,10 +71,10 @@
 
   border: 1px solid @example-border-color;
   border-radius: 3px;
-}
 
-.example__data-value:last-child {
-  margin-right: 0;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .example__cost {
@@ -105,14 +105,14 @@
   background-color: @bg-color-gray;
   background-position: center 0;
   background-repeat: no-repeat;
-}
 
-.example__slide:first-child {
-  background-image: url("../img/before-mobile@1x.png");
-}
+  &:first-child {
+    background-image: url("../img/before-mobile@1x.png");
+  }
 
-.example__slide:last-child {
-  background-image: url("../img/after-mobile@1x.png");
+  &:last-child {
+    background-image: url("../img/after-mobile@1x.png");
+  }
 }
 
 .example__slide--active {
@@ -152,16 +152,16 @@
     border-radius: 3px;
 
     cursor: pointer;
+  }
 
-    &--left {
-      margin-left: 0;
-      margin-right: auto;
-    }
+  .example__toggle-toddler--left {
+    margin-left: 0;
+    margin-right: auto;
+  }
 
-    &--right {
-      margin-right: 0;
-      margin-left: auto;
-    }
+  .example__toggle-toddler--right {
+    margin-right: 0;
+    margin-left: auto;
   }
 }
 
@@ -280,7 +280,19 @@
 
     padding-bottom: 6px;
 
-    border-bottom: 1px dotted @example-border-color;
+    border-bottom: 1px dotted @text-color-black;
+
+    &:hover {
+      border-bottom: 1px solid @text-color-black;
+    }
+
+    &:focus {
+      border-bottom: 1px solid @text-color-black;
+    }
+
+    &:active {
+      border: none;
+    }
   }
 
   .example__toggle-range {
@@ -310,8 +322,13 @@
 
     cursor: pointer;
 
+    &:hover {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
     &:active {
       border-color: @bg-color-green;
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
     }
 
     &::after {

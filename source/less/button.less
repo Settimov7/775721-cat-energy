@@ -13,6 +13,19 @@
 
   background-color: @button-bg-color;
   border: none;
+
+  &:hover {
+    background-color: @button-bg-color-hover;
+  }
+
+  &:focus {
+    background-color: @button-bg-color-hover;
+  }
+
+  &:active {
+    background-color: @button-bg-color-hover;
+    color: @button-text-color-active;
+  }
 }
 
 .button--gray {
@@ -22,26 +35,19 @@
   padding: 10px 0;
 
   background: @button-gray-bg-color;
-}
 
-.button:hover,
-.button:focus,
-.button:active {
-  background-color: @button-bg-color-hover;
-}
+  &:hover {
+    background-color: @button-gray-bg-color-hover;
+  }
 
-.button:active {
-  color: @button-text-color-active;
-}
+  &:focus {
+    background-color: @button-gray-bg-color-hover;
+  }
 
-.button--gray:hover,
-.button--gray:focus,
-.button--gray:active {
-  background-color: @button-gray-bg-color-hover;
-}
-
-.button--gray:active {
-  color: @button-gray-text-color-active;
+  &:active {
+    background-color: @button-gray-bg-color-hover;
+    color: @button-gray-text-color-active;
+  }
 }
 
 @media (min-width: @tablet-width) {
