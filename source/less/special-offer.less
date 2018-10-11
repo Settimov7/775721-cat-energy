@@ -6,7 +6,7 @@
   box-sizing: border-box;
   .center(@mobile-width-percent);
   min-height: 289px;
-  padding-top: 185px;
+  padding-top: 187px;
   padding-bottom: 40px;
   margin-bottom: 35px;
 
@@ -70,7 +70,7 @@
 @media (min-width: @desktop-width) {
   .special-offer {
     width: 245px;
-    height: 285px;
+    height: 288px;
     .reset-indents();
     margin-right: 110px;
 
@@ -83,6 +83,12 @@
 
     width: 170px;
     margin: 0 37px;
-    margin-top: 190px;
+    margin-top: 188px;
+
+    &::before {
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
   }
 }

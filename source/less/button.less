@@ -15,6 +15,15 @@
   border: none;
 }
 
+.button--gray {
+  .set-font(custom-font; 16px; 20px);
+  color: @button-gray-text-color;
+
+  padding: 10px 0;
+
+  background: @button-gray-bg-color;
+}
+
 .button:hover,
 .button:focus,
 .button:active {
@@ -23,12 +32,6 @@
 
 .button:active {
   color: @button-text-color-active;
-}
-
-.button--gray {
-  color: @button-gray-text-color;
-
-  background: @button-gray-bg-color;
 }
 
 .button--gray:hover,
@@ -45,5 +48,9 @@
   .button {
     .set-font(custom-font; 16px; 20px);
     padding: 16px 28px;
+  }
+
+  .button--catalog {
+    padding: 10px 0;
   }
 }
