@@ -1,23 +1,54 @@
-.catalog-extra {
+.catalog-extra__wrapper {
   .center(@mobile-width-percent);
-  margin-bottom: 39px;
+}
+
+.catalog-extra__title-container {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    height: 3px;
+
+    background-color: @title-line-color;
+  }
 }
 
 .catalog-extra__title {
   .set-font(custom-font; 24px; 24px);
 
   .reset-indents();
-  padding: 31px 0;
-  border-bottom: 1px solid @catalog-table-border-color;
+  width: 247px;
+  box-sizing: border-box;
+  padding: 28px 0;
+  padding-bottom: 34px;
+
+  background-color: @white;
 }
 
 .catalog-extra__list {
   .list-reset();
+  margin-bottom: 39px;
 }
 
 .catalog-extra__item {
-  padding: 17px 0;
+  padding-top: 13px;
+  padding-bottom: 17px;
+
   border-bottom: 1px solid @catalog-table-border-color;
+
+  &:first-child {
+    border-top: 1px solid @catalog-table-border-color;
+  }
 }
 
 .catalog-extra__product-title {
@@ -27,7 +58,8 @@
   color: @text-color-black;
 
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
+  margin-left: 2px;
 }
 
 .catalog-extra__product-description {
@@ -36,61 +68,111 @@
 
   display: flex;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
+}
+
+.catalog-extra__description-quantity {
+  margin: 0;
+}
+
+.catalog-extra__description-price {
+  margin: 0;
 }
 
 @media (min-width: @tablet-width) {
   .catalog-extra {
-    .center(@tablet-width-percent);
     margin-bottom: 69px;
+  }
+
+  .catalog-extra__wrapper {
+    .center(@tablet-width-percent);
+  }
+
+  .catalog-extra__list {
+    margin-bottom: 69px;
+  }
+
+  .catalog-extra__title-container {
+    &::before {
+      top: 21px;
+      left: 0;
+    }
   }
 
   .catalog-extra__title {
     .set-font(custom-font; 36px; 36px);
 
-    margin-bottom: 74px;
-
+    width: 412px;
+    padding: 0;
+    margin-bottom: 80px;
+    padding-left: 35px;
+    padding-right: 30px;
     border: none;
+    background: @white;
   }
 
   .catalog-extra__item {
-    padding: 28px 37px;
+    padding: 26px 37px;
 
     border: 1px solid @catalog-table-border-color;
     border-bottom: none;
-  }
 
-  .catalog-extra__item:last-of-type {
-    border-bottom: 1px solid @catalog-table-border-color;
+    &:last-of-type {
+      border-bottom: 1px solid @catalog-table-border-color;
+    }
   }
 
   .catalog-exatra__item-container {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    margin-bottom: 22px;
   }
 
   .catalog-extra__product-title {
     .set-font(custom-font; 20px; 20px);
+
+    margin: 0;
   }
 
   .catalog-extra__product-description {
     .set-font(regular-font; 16px; 20px);
+    margin: 0;
   }
 
   .catalog-extra__description-quantity {
-    margin-right: 53px;
+    margin-right: 51px;
+  }
+
+  .catalog-extra__item:nth-child(2) .catalog-extra__description-quantity {
+    margin-right: 59px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog-extra {
-    width: 895px;
     .reset-indents();
+    margin-bottom: 87px;
+  }
+
+  .catalog-extra__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    .center(@desktop-fix-width);
+  }
+
+  .catalog-extra__list {
+    width: 895px;
+    margin: 0;
+    margin-right: 80px;
   }
 
   .catalog-extra__title {
-    margin-bottom: 74px;
+    width: 414px;
+    margin-bottom: 79px;
+    padding: 0;
+    padding-left: 38px;
+    margin-left: -39px;
   }
 
   .catalog-extra__item {
@@ -98,29 +180,33 @@
     justify-content: space-between;
     align-items: baseline;
     padding: 0;
-    padding-top: 15px;
-    padding-bottom: 16px;
+    padding-top: 16px;
 
     border-left: none;
     border-right: none;
   }
 
+  .catalog-exatra__item-container {
+    margin-bottom: 23px;
+  }
+
   .catalog-extra__product-title {
     width: 245px;
     margin: 0;
+    margin-left: 1px;
+    margin-right: 80px;
   }
 
-  .catalog-extra__product-description {
-    margin: 0;
+  .catalog-extra__item:nth-child(2) .catalog-extra__description-quantity {
+    margin-right: 0;
   }
 
   .catalog-extra__description-quantity {
-    width: 245px;
+    width: 244px;
     margin: 0;
   }
 
   .catalog-extra__description-price {
     width: 80px;
-    margin: 0;
   }
 }

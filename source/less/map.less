@@ -1,9 +1,34 @@
 .map {
+  position: relative;
+  z-index: 1;
+  height: 362px;
   margin-bottom: 39px;
+  overflow: hidden;
+}
+
+.map__image {
+  position: absolute;
+  top: -37px;
 }
 
 @media (min-width: @tablet-width) {
   .map {
-    margin-bottom: 64px;
+    height: 396px;
+    margin-bottom: 57px;
+
+    &--inner-page {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map {
+    height: 400px;
+    margin-bottom: 55px;
+
+    &--inner-page {
+      margin-bottom: 50px;
+    }
   }
 }

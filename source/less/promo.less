@@ -1,7 +1,7 @@
 .promo {
   color: @white;
 
-  padding-top: 32px;
+  padding-top: 30px;
   margin-bottom: 22px;
 
   background: url("../img/index-background-mobile@1x.jpg") no-repeat center 0,
@@ -11,6 +11,9 @@
 }
 
 .promo__wrapper {
+  position: relative;
+  z-index: 1;
+
   .center(@mobile-width-percent);
 }
 
@@ -20,7 +23,7 @@
 
   min-height: 80px;
   .reset-indents();
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .promo__text {
@@ -30,27 +33,44 @@
 
   .reset-indents();
   margin-bottom: 303px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 137px;
+    left: 50%;
+
+    display: block;
+    width: 280px;
+    height: 271px;
+    margin-left: -140px;
+
+    background-image: url("../img/index-can-mobile@1x.png");
+  }
 }
 
 @media (min-width: @tablet-width) {
   .promo {
     color: @text-color-black;
 
+    padding-bottom: 506px;
+
     background-color: @white;
     background-image: none;
   }
 
   .promo__wrapper {
-    .center(@tablet-width-percent);
     box-sizing: border-box;
-    padding-left: 12.71%;
+    .center(@tablet-width-percent);
+    padding-left: 11.4%;
   }
 
   .promo__title {
     .set-font(custom-font; 60px; 60px);
     text-align: left;
 
-    width: 69%;
+    width: 70%;
     margin-bottom: 40px;
   }
 
@@ -58,12 +78,22 @@
     .set-font(custom-font; 20px; 20px);
     text-align: left;
 
-    margin-bottom: 45px;
+    margin-bottom: 49px;
+
+    &::before {
+      z-index: -1;
+      top: 200px;
+      left: 0;
+
+      width: 92.19%;
+      height: 609px;
+      margin-left: 4%;
+
+      background: url("../img/index-can-tablet@1x.jpg") no-repeat center 0;
+    }
   }
 
   .promo__button {
-    position: static;
-
     .set-font(custom-font; 20px; 20px);
 
     width: 39.6%;
@@ -76,13 +106,9 @@
     margin-bottom: 80px;
 
     background:
-      url("../img/index-background-desktop@1x.jpg") no-repeat 100% -146px,
+      url("../img/index-background-desktop@1x.jpg") no-repeat 100% -106px,
       linear-gradient(to right, @white 50%, @bg-color-green 50%);
     background-color: @bg-color-green;
-  }
-
-  .promo__button {
-    width: 245px;
   }
 
   .promo__wrapper {
@@ -92,10 +118,27 @@
 
   .promo__title {
     width: 415px;
-    margin-bottom: 45px;
+    margin-top: 84px;
+    margin-bottom: 42px;
   }
 
   .promo__text {
-    margin-bottom: 50px;
+    margin-bottom: 51px;
+
+    &::before {
+      top: -80px;
+      left: 450px;
+
+      display: block;
+      width: 552px;
+      height: 499px;
+      margin: 0;
+
+      background-image: url("../img/index-can-desktop@1x.png");
+    }
+  }
+
+  .promo__button {
+    width: 245px;
   }
 }
