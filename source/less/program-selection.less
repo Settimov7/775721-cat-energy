@@ -274,24 +274,46 @@
   .list-reset();
 }
 
-.program-selection__legend {
+.program-selection__title-container {
   position: relative;
+  z-index: 1;
+  overflow: hidden;
+
   width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 30%;
+    left: 50%;
+
+    width: 100%;
+    height: 3px;
+
+    background-color: @title-line-color;
+  }
 }
 
-.program-selection__legend h3 {
+.program-selection__fieldset--user .program-selection__title-container::before {
+  top: 20%;
+}
+
+.program-selection__title-wrapper {
+  .center(@mobile-width-percent);
+}
+
+.program-selection__legend {
   .set-font(custom-font; 24px; 24px);
 
-  display: flex;
-  align-items: center;
+  .reset-indents();
+  width: 200px;
+  box-sizing: border-box;
   margin: 0;
-  margin-bottom: 34px;
-  margin-left: 6.25%;
   padding-top: 4px;
+  padding-bottom: 34px;
 
-  &::after {
-    .title-line-mobile();
-  }
+  background-color: @white;
 }
 
 .program-selection__fieldset--user h3::after {
@@ -415,19 +437,30 @@
     margin-bottom: 0;
   }
 
-  .program-selection__legend h3 {
+  .program-selection__title-container::before {
+    top: 20%;
+    left: 0;
+  }
+
+  .program-selection__title-wrapper {
+    width: @tablet-width-percent;
+  }
+
+  .program-selection__legend {
     .set-font(custom-font; 36px; 36px);
 
+    width: 595px;
     .reset-indents();
+    padding-left: 39px;
     margin-bottom: 75px;
+  }
 
-    &::before {
-      .title-line-left();
-    }
+  .program-selection__fieldset--comment .program-selection__legend {
+    width: 260px;
+  }
 
-    &::after {
-      .title-line-right();
-    }
+  .program-selection__fieldset--extra .program-selection__legend {
+    width: 290px;
   }
 
   .program-selection__checkbox-list {
@@ -509,10 +542,22 @@
     .center(@desktop-fix-width);
   }
 
-  .program-selection__legend h3 {
-    &::before {
-      .title-line-left(70px);
-    }
+  .program-selection__title-wrapper {
+    width: 1220px;
+  }
+
+  .program-selection__legend {
+    padding: 0;
+    padding-left: 38px;
+    margin-left: -39px;
+  }
+
+  .program-selection__fieldset--extra .program-selection__legend {
+    margin-bottom: 55px;
+  }
+
+  .program-selection__fieldset--extra .program-selection__title-container::before {
+    top: 25%;
   }
 
   .program-selection__container:first-child {
