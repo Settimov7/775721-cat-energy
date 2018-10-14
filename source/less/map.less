@@ -1,34 +1,51 @@
 .map {
   position: relative;
   z-index: 1;
-  height: 362px;
   margin-bottom: 39px;
   overflow: hidden;
 }
 
 .map__image {
-  position: absolute;
-  top: -37px;
+  height: 362px;
 }
 
 @media (min-width: @tablet-width) {
   .map {
-    height: 396px;
     margin-bottom: 57px;
 
     &--inner-page {
       margin-bottom: 50px;
     }
   }
+
+  .map__image {
+    height: 396px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .map {
-    height: 400px;
     margin-bottom: 55px;
 
     &--inner-page {
       margin-bottom: 50px;
     }
+  }
+
+  .map__image {
+    height: 401px;
+  }
+
+  .map__wrapper {
+    position: absolute;
+    z-index: 2;
+    top: 95px;
+    left: 0;
+    right: 0;
+
+    box-sizing: border-box;
+    width: 1440px;
+    margin: 0 auto;
+    padding-left: 110px;
   }
 }
