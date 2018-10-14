@@ -14,6 +14,12 @@
   margin: 0 auto;
 }
 
+.set-font (@_; @font-size:16px; @line-height:16px; @font-weight: normal;) {
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: @font-weight;
+}
+
 .set-font(regular-font; @font-size:16px; @line-height:16px; @font-weight: normal;) {
   font-family: "Arial", sans-serif;
 }
@@ -22,33 +28,23 @@
   font-family: "Oswald", "Arial", sans-serif;
 }
 
-.set-font (@_; @font-size:16px; @line-height:16px; @font-weight: normal;) {
-  font-size: @font-size;
-  line-height: @line-height;
-  font-weight: @font-weight;
-}
-
-.advantages_icon(mobile; @image-url) {
-  width: 60px;
-  height: 60px;
-}
-
-.advantages_icon(tablet; @image-url) {
-  width: 80px;
-  height: 80px;
-}
-
-.advantages_icon(@_; @image-url) {
+.advantages-icon(@image-1x-url; @image-2x-url) {
   content: "";
 
   position: absolute;
   top: 0;
   left: 0;
 
-  background-image: @image-url;
   background-color: @bg-color-green;
   background-position: 50%;
   background-repeat: no-repeat;
+
+  background-image: @image-1x-url;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: @image-2x-url;
+    background-size: 50px auto;
+  }
 }
 
 .advantages-number(@counter; @left:34%;) {
