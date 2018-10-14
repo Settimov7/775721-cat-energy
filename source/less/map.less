@@ -6,12 +6,15 @@
 }
 
 .map__image {
+  display: block;
+  width: 320px;
   height: 362px;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
   .map {
-    margin-bottom: 57px;
+    margin-bottom: 47px;
 
     &--inner-page {
       margin-bottom: 50px;
@@ -19,20 +22,18 @@
   }
 
   .map__image {
+    width: 767px;
     height: 396px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .map {
-    margin-bottom: 55px;
-
-    &--inner-page {
-      margin-bottom: 50px;
-    }
+    margin-bottom: 40px;
   }
 
   .map__image {
+    width: 1440px;
     height: 401px;
   }
 
