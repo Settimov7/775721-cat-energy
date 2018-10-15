@@ -4,10 +4,21 @@
   padding-top: 30px;
   margin-bottom: 22px;
 
-  background: url("../img/index-background-mobile@1x.jpg") no-repeat center 0,
-    linear-gradient(to bottom, @bg-color-green 63.4%, @white 63.4%);
-
   background-color: @bg-color-green;
+  background-image:
+    url("../img/index-background-mobile@1x.jpg"),
+    linear-gradient(to bottom, @bg-color-green 63.4%, @white 63.4%);
+  background-repeat: no-repeat;
+  background-position: center 0;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image:
+      url("../img/index-background-mobile@2x.jpg"),
+      linear-gradient(to bottom, @bg-color-green 63.4%, @white 63.4%);
+    background-size:
+      320px auto,
+      auto;
+  }
 }
 
 .promo__wrapper {
@@ -47,6 +58,13 @@
     margin-left: -140px;
 
     background-image: url("../img/index-can-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-can-mobile@2x.png");
+      background-size: 280px auto;
+    }
   }
 }
 
@@ -54,6 +72,7 @@
   .promo {
     color: @text-color-black;
 
+    padding-top: 20px;
     padding-bottom: 506px;
 
     background-color: @white;
@@ -83,13 +102,17 @@
     &::before {
       z-index: -1;
       top: 200px;
-      left: 0;
+      left: 19.5%;
 
-      width: 92.19%;
+      width: 709px;
       height: 609px;
-      margin-left: 4%;
 
-      background: url("../img/index-can-tablet@1x.jpg") no-repeat center 0;
+      background-image: url("../img/index-can-tablet@1x.jpg");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-can-tablet@2x.jpg");
+        background-size: 709px auto;
+      }
     }
   }
 
@@ -102,13 +125,23 @@
 
 @media (min-width: @desktop-width) {
   .promo {
-    padding-bottom: 190px;
+    padding-bottom: 188px;
     margin-bottom: 80px;
 
-    background:
-      url("../img/index-background-desktop@1x.jpg") no-repeat 100% -106px,
-      linear-gradient(to right, @white 50%, @bg-color-green 50%);
     background-color: @bg-color-green;
+    background-image:
+      url("../img/index-background-desktop@1x.jpg"),
+      linear-gradient(to right, @white 50%, @bg-color-green 50%);
+    background-repeat: no-repeat;
+    background-position: 100% -120px, center 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image:
+        url("../img/index-background-desktop@2x.jpg"),
+        linear-gradient(to right, @white 50%, @bg-color-green 50%);
+
+      background-size: 720px auto, auto;
+    }
   }
 
   .promo__wrapper {
@@ -135,6 +168,11 @@
       margin: 0;
 
       background-image: url("../img/index-can-desktop@1x.png");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-can-desktop@2x.png");
+        background-size: 552px auto;
+      }
     }
   }
 
