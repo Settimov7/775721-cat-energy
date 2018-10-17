@@ -24,22 +24,22 @@
 .social__link {
   text-decoration: none;
   color: @text-color-black;
-
-  &:hover svg {
-    fill: @htmlacademy-logo-hover-color;
-  }
-
-  &:focus svg {
-    fill: @htmlacademy-logo-hover-color;
-  }
-
-  &:active svg {
-    fill: @htmlacademy-logo-active-color;
-  }
 }
 
-.social__link svg {
+.social__icon {
   fill: @social-icon-color-gray;
+
+  &:hover {
+    fill: @htmlacademy-logo-hover-color;
+  }
+
+  &:focus {
+    fill: @htmlacademy-logo-hover-color;
+  }
+
+  &:active {
+    fill: @htmlacademy-logo-active-color;
+  }
 
   &:last-of-type {
     display: none;
@@ -54,7 +54,7 @@
     border: none;
   }
 
-  .social__link svg {
+  .social__icon {
     &:first-of-type {
       display: none;
     }

@@ -271,13 +271,14 @@
   .example__slide {
     left: 7px;
 
-    width: 690px;
     height: 517px;
 
     background-color: transparent;
 
     &:first-child {
+      width: 338px;
       background-image: url("../img/before-tablet@1x.png");
+      background-position: 0 0;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/before-tablet@2x.png");
@@ -286,6 +287,12 @@
     }
 
     &:last-child {
+      left: 50%;
+
+      width: 352px;
+
+      background-position: 100% 0;
+
       background-image: url("../img/after-tablet@1x.png");
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -433,6 +440,7 @@
 
   .example__slide {
     &:first-child {
+      width: 365px;
       background-image: url("../img/before-desktop@1x.png");
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -442,6 +450,9 @@
     }
 
     &:last-child {
+      left: 61%;
+
+      width: 325px;
       background-image: url("../img/after-desktop@1x.png");
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
