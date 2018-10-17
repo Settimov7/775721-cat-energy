@@ -47,10 +47,13 @@
 
 @media (min-width: @tablet-width) {
   .more-items {
-    width: 100%;
-    border: none;
-    padding: 0;
+    box-sizing: border-box;
+    width: 45.76%;
+    margin: 0;
+    padding: 38px 37px;
     padding-top: 164px;
+
+    border: 1px solid @catalog-more-border-color;
   }
 
   .more-items__title {
@@ -79,6 +82,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .more-items {
+    width: 245px;
+  }
+
   .more-items__title {
     width: 140px;
   }
