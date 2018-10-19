@@ -129,6 +129,10 @@
     }
   }
 
+  .catalog__item-wrapper {
+    width: auto;
+  }
+
   .catalog__product-link {
     flex-direction: column-reverse;
     align-items: center;
@@ -136,12 +140,11 @@
   }
 
   .catalog__image-container {
-
     width: auto;
 
     position: absolute;
     top: auto;
-    bottom: 305px;
+    bottom: 300px;
     left: 0;
     right: 0;
 
@@ -171,13 +174,15 @@
 
   .catalog__description-field {
     border-bottom: 1px solid @catalog-table-border-color;
-    padding-bottom: 7px;
+    padding-bottom: 8px;
+    // padding: 0;
   }
 
   .catalog__description-value {
     border-bottom: 1px solid @catalog-table-border-color;
     padding: 0;
     padding-bottom: 3px;
+    padding: 0;
   }
 
   .catalog__item button {

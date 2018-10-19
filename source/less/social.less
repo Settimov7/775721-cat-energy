@@ -48,10 +48,16 @@
 
 @media (min-width: @tablet-width) {
   .social__list {
-    width: 120px;
+    width: auto;
     .reset-indents();
+    justify-content: flex-start;
+    margin-left: 46px;
 
     border: none;
+  }
+
+  .social__item {
+    margin-right: 29px;
   }
 
   .social__icon {
