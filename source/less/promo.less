@@ -16,8 +16,7 @@
       url("../img/index-background-mobile@2x.jpg"),
       linear-gradient(to bottom, @bg-color-green 63.4%, @white 63.4%);
     background-size:
-      320px auto,
-      auto;
+      320px auto, auto;
   }
 }
 
@@ -125,22 +124,27 @@
 
 @media (min-width: @desktop-width) {
   .promo {
-    padding-bottom: 188px;
+    padding: 0;
     margin-bottom: 80px;
 
     background-color: @bg-color-green;
-    background-image:
-      url("../img/index-background-desktop@1x.jpg"),
-      linear-gradient(to right, @white 50%, @bg-color-green 50%);
+    background-image: linear-gradient(to right, @white 50%, @bg-color-green 50%);
+    background-size: auto;
+  }
+
+  .promo__bg-wrapper {
+    .center(@desktop-width);
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 188px;
+
+    background-image: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-position: 100% -115px, center 0;
+    background-position: 100% -115px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image:
-        url("../img/index-background-desktop@2x.jpg"),
-        linear-gradient(to right, @white 50%, @bg-color-green 50%);
-
-      background-size: 720px auto, auto;
+      background-image: url("../img/index-background-desktop@2x.jpg");
+      background-size: 720px auto;
     }
   }
 
