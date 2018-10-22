@@ -1,8 +1,7 @@
 .example {
   color: @text-color-black;
 
-  margin-bottom: 27px;
-  padding-top: 22px;
+  padding-top: 20px;
   padding-bottom: 35px;
 
   background-color: @bg-color-gray;
@@ -16,7 +15,7 @@
   .set-font(custom-font; 36px; 60px);
 
   .reset-indents();
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .example__description {
@@ -37,7 +36,7 @@
 .example__data-field-row {
   position: absolute;
   top: 52px;
-  left: 20px;
+  left: 17px;
 }
 
 .example__data-field {
@@ -49,7 +48,7 @@
   box-sizing: border-box;
   width: 87px;
   padding: 0 15px;
-  margin-right: 66px;
+  margin-right: 69px;
 
   background-color: @bg-color-gray;
 
@@ -82,7 +81,7 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 34px;
 }
 
 .example__slider {
@@ -94,7 +93,7 @@
 .example__slide-list {
   height: 240px;
   .list-reset();
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 }
 
 .example__slide {
@@ -134,7 +133,10 @@
 .example__toggle {
   display: flex;
   justify-content: space-between;
-  .center(200px);
+  .center(210px);
+  box-sizing: border-box;
+  padding-left: 8px;
+  padding-right: 4px;
 }
 
 .example__toggle-status {
@@ -150,9 +152,11 @@
     height: 14px;
 
     box-sizing: border-box;
-    padding: 4px 6px;
+    padding: 3px 6px;
+    margin-top: 2px;
 
     background-color: @white;
+    border: 1px solid @example-border-color;
     border-radius: 6px;
   }
 
@@ -183,7 +187,6 @@
 
     padding-top: 42px;
     padding-bottom: 68px;
-    margin-bottom: 64px;
 
     background: linear-gradient(to bottom, @white 57.35%, @bg-color-gray 57.35%);
     border-top: 1px solid @menu-border-color;
@@ -252,6 +255,7 @@
     width: 176px;
     margin: 0;
     margin-right: auto;
+    margin-top: 9px;
   }
 
   .example__cost-value {
@@ -303,7 +307,8 @@
   }
 
   .example__toggle {
-    width: 573px;
+    width: 570px;
+    padding: 0;
   }
 
   .example__toggle-status {
@@ -333,6 +338,7 @@
     height: 6px;
 
     margin: 7px 0;
+    margin-top: 8px;
 
     background-color: @toggle-range-color;
     border-radius: 2.5px;
@@ -344,11 +350,11 @@
     top: -14px;
     left: 198px;
 
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
 
     background-color: @white;
-    border: 1px solid @toggle-range-color;
+    border: 2px solid @toggle-range-color;
     border-radius: 50%;
 
     cursor: pointer;
@@ -410,7 +416,7 @@
   .example__data {
     width: 370px;
     margin: 0;
-    margin-bottom: 51px;
+    margin-bottom: 44px;
   }
 
   .example__data-field {

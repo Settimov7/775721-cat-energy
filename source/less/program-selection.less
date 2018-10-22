@@ -128,8 +128,8 @@
     content: "";
 
     position: absolute;
-    top: 11px;
-    left: 11px;
+    top: 9px;
+    left: 9px;
 
     width: 12px;
     height: 12px;
@@ -299,11 +299,12 @@
   .set-font(custom-font; 24px; 24px);
 
   .reset-indents();
-  width: 200px;
+  display: inline-block;
   box-sizing: border-box;
   margin: 0;
   padding-top: 4px;
   padding-bottom: 34px;
+  padding-right: 22px;
 
   background-color: @white;
 }
@@ -335,6 +336,7 @@
     .set-font(custom-font; 60px; 60px);
 
     padding: 30px 0;
+    padding-top: 20px;
     margin-bottom: 25px;
   }
 
@@ -375,6 +377,9 @@
 
   .program-selection__radio {
     &:checked + .program-selection__radio-name::after {
+      top: 11px;
+      left: 11px;
+
       width: 18px;
       height: 18px;
     }
@@ -453,6 +458,13 @@
 
   .program-selection__fieldset--extra .program-selection__legend {
     width: 290px;
+    margin-bottom: 57px;
+  }
+
+  .program-selection__fieldset--extra .program-selection__title-container {
+    &::before {
+      top: 23%;
+    }
   }
 
   .program-selection__checkbox-list {
@@ -517,7 +529,7 @@
 @media (min-width: @desktop-width) {
   .program-selection__title {
     padding: 0;
-    padding-top: 80px;
+    padding-top: 73px;
     margin-bottom: 55px;
   }
 
