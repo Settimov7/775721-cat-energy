@@ -93,9 +93,9 @@
     fill: @form-radio-color;
   }
 
-  // &:invalid + svg{
-  //   fill: @input-error-border-color;
-  // }
+  &:required:invalid + svg {
+    fill: @input-error-border-color;
+  }
 }
 
 .program-selection__input--tel {
@@ -113,9 +113,9 @@
     fill: @form-radio-color;
   }
 
-  // &:invalid + svg{
-  //   fill: @input-error-border-color;
-  // }
+  &:required:invalid + svg {
+    fill: @input-error-border-color;
+  }
 }
 
 .program-selection__textarea {
@@ -260,9 +260,9 @@
   outline: none;
 }
 
-// .program-selection__input:invalid {
-//   border-color: @input-error-border-color;
-// }
+.program-selection__input:required:invalid {
+  border-color: @input-error-border-color;
+}
 
 .program-selection__input::placeholder,
 .program-selection__textarea::placeholder {
