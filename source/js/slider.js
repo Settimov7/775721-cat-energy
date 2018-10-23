@@ -68,5 +68,3 @@ var sliderToggle = document.querySelector('.example__toggle-toddler');
     });
   }
 }
-
-
