@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Подбор программы &laquo;Cat Energy&raquo;</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     <link rel="stylesheet" href="css/style-min.css">
   </head>
   <body>
@@ -13,33 +15,35 @@
     </div>
 
     <header class="header">
-      <div class="header__container">
-        <h1 class="visually-hidden">Зоомагазин &laquo;Cat Energy&raquo;</h1>
+      <div class="header__bg-wrapper">
+        <div class="header__container">
+          <h1 class="visually-hidden">Зоомагазин &laquo;Cat Energy&raquo;</h1>
 
-        <a class="header__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="header__logo-image" src="img/logo-mobile.svg" width="192" height="37" alt="Зоомагазин &laquo;Cat Energy&raquo;">
-          </picture>
-        </a>
-
-        <nav class="main-navigation main-navigation--opened main-navigation--nojs">
-          <a class="main-navigation__toggle" href="#">
-            <span class="visually-hidden">Открыть меню</span>
+          <a class="header__logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="header__logo-image" src="img/logo-mobile.svg" width="192" height="37" alt="Зоомагазин &laquo;Cat Energy&raquo;">
+            </picture>
           </a>
-          <ul class="main-navigation__menu-list">
-            <li class="main-navigation__menu-item">
-              <a class="main-navigation__menu-link" href="index.html">Главная</a>
-            </li>
-            <li class="main-navigation__menu-item">
-              <a class="main-navigation__menu-link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="main-navigation__menu-item main-navigation__menu-item--active">
-              <a class="main-navigation__menu-link">Подбор программы</a>
-            </li>
-          </ul>
-        </nav>
+
+          <nav class="main-navigation main-navigation--opened main-navigation--nojs">
+            <a class="main-navigation__toggle" href="#">
+              <span class="visually-hidden">Открыть меню</span>
+            </a>
+            <ul class="main-navigation__menu-list">
+              <li class="main-navigation__menu-item">
+                <a class="main-navigation__menu-link" href="index.html">Главная</a>
+              </li>
+              <li class="main-navigation__menu-item">
+                <a class="main-navigation__menu-link" href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="main-navigation__menu-item main-navigation__menu-item--active">
+                <a class="main-navigation__menu-link">Подбор программы</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -112,7 +116,7 @@
             <div class="program-selection__title-container">
               <div class="program-selection__title-wrapper">
                 <p class="program-selection__legend">
-                  Контактные данные<br> (владельца кота)
+                  Контактные данные<br> <span class="program-selection__legend-span">(владельца кота)</span>
                 </p>
               </div>
             </div>
@@ -120,7 +124,7 @@
             <div class="program-selection__wrapper">
               <div class="program-selection__list">
                 <label class="program-selection__label program-selection__label--column">
-                  <span class="program-selection__label-name">E-mail:<sup>*</sup></span>
+                  <span class="program-selection__label-name program-selection__label-name--email">E-mail:<sup>*</sup></span>
                   <input class="program-selection__input program-selection__input--email" type="email" name="email" placeholder="email@example.com" required>
 
                   <svg width="17" height="13">
@@ -313,6 +317,6 @@
       </div>
     </footer>
 
-    <script src="js/menu.js"></script>
+    <script src="js/main-min.js"></script>
   </body>
 </html>
