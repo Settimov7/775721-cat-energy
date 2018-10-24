@@ -1,6 +1,6 @@
 var slides = document.querySelectorAll('.example__slide');
 var sliderNavigation = document.querySelectorAll('.example__toggle-status');
-var sliderToggle = document.querySelector('.example__toggle-toddler');
+var sliderToggle = document.querySelector('.example__toggle-button');
 
   slides = Array.prototype.slice.call(slides);
   if (slides.length > 0) {
@@ -10,15 +10,15 @@ var sliderToggle = document.querySelector('.example__toggle-toddler');
     function changeToBeforeSlide() {
       slides[1].classList.remove('example__slide--active');
       slides[0].classList.add('example__slide--active');
-      sliderToggle.classList.remove('example__toggle-toddler--right');
-      sliderToggle.classList.add('example__toggle-toddler--left');
+      sliderToggle.classList.remove('example__toggle-button--right');
+      sliderToggle.classList.add('example__toggle-button--left');
     }
 
     function changeToAfterSlide() {
       slides[0].classList.remove('example__slide--active');
       slides[1].classList.add('example__slide--active');
-      sliderToggle.classList.remove('example__toggle-toddler--left');
-      sliderToggle.classList.add('example__toggle-toddler--right');
+      sliderToggle.classList.remove('example__toggle-button--left');
+      sliderToggle.classList.add('example__toggle-button--right');
     }
 
     sliderNavigation[0].addEventListener('click', function(evt) {
@@ -36,7 +36,7 @@ var sliderToggle = document.querySelector('.example__toggle-toddler');
     sliderToggle.addEventListener('click', function(evt) {
       evt.preventDefault();
 
-      if(sliderToggle.classList.contains('example__toggle-toddler--left')) {
+      if(sliderToggle.classList.contains('example__toggle-button--left')) {
         changeToAfterSlide();
       } else {
         changeToBeforeSlide();
