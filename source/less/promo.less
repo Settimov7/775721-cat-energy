@@ -132,7 +132,8 @@
   }
 
   .promo__bg-wrapper {
-    .center(@desktop-width);
+    max-width: @desktop-full-width;
+    margin: 0 auto;
     box-sizing: border-box;
     padding-top: 20px;
     padding-bottom: 188px;
@@ -140,10 +141,11 @@
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: 100% -115px;
+    background-size: 50% 696px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-background-desktop@2x.jpg");
-      background-size: 720px auto;
+      background-size: 50% 696px;
     }
   }
 
@@ -185,3 +187,9 @@
     padding-right: 28px;
   }
 }
+
+// @media (min-width: @desktop-full-width) {
+//   .promo__bg-wrapper {
+//     padding-bottom: 188px;
+//   }
+// }

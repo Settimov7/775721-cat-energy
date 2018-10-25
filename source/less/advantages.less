@@ -22,8 +22,16 @@
   margin-bottom: 20px;
 
   &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
     width: 60px;
     height: 60px;
+
+    background-color: @advantages-decor-color;
   }
 
   &:first-child::after {
@@ -122,7 +130,7 @@
 @media (min-width: @desktop-width) {
   .advantages {
     .center(@desktop-fix-width);
-    margin-bottom: 99px;
+    margin-bottom: 40px;
   }
 
   .advantages__title {
@@ -130,8 +138,10 @@
   }
 
   .advantages__item {
+    box-sizing: border-box;
     width: 245px;
     margin: 0;
+    min-height: 270px;
 
     &:first-child::before {
       .advantages-number(counter(number); 120px);

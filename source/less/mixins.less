@@ -21,7 +21,7 @@
 }
 
 .set-font(regular-font; @font-size:16px; @line-height:16px; @font-weight: normal;) {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
 }
 
 .set-font(custom-font; @font-size:16px; @line-height:16px; @font-weight: normal;) {
@@ -29,17 +29,9 @@
 }
 
 .advantages-icon(@image-1x-url; @image-2x-url) {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  background-color: @advantages-decor-color;
+  background-image: @image-1x-url;
   background-position: 50%;
   background-repeat: no-repeat;
-
-  background-image: @image-1x-url;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: @image-2x-url;
